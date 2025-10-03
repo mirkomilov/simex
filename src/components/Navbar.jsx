@@ -1,18 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const activeStyle = "text-blue-500 font-bold"; // active bo'lganda ko'rinishi
-  const normalStyle = "text-gray-700 hover:text-blue-400";
+  const activeStyle = "text-green-600 font-bold border-b-2 border-green-600";
+  const normalStyle = "text-gray-700 hover:text-green-500";
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-gray-100 shadow-md">
+    <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-md sticky top-0 z-50">
       {/* Logo */}
-      <div className="text-xl font-bold text-blue-600">
-        <Link to="/home">SIMEX</Link>
+      <div className="text-2xl font-extrabold text-green-600 tracking-wide">
+        <Link to="/home">SIMEX PROGRESS</Link>
       </div>
 
       {/* Links */}
-      <div className="flex gap-6">
+      <div className="flex gap-8 text-lg">
         <NavLink
           to="/home"
           className={({ isActive }) => (isActive ? activeStyle : normalStyle)}
@@ -37,6 +37,15 @@ export default function Navbar() {
         >
           Contacts
         </NavLink>
+      </div>
+
+      {/* Language Selector */}
+      <div>
+        <select className="border border-gray-300 rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-green-400">
+          <option value="en">EN</option>
+          <option value="uz">UZ</option>
+          <option value="ru">RU</option>
+        </select>
       </div>
     </nav>
   );
