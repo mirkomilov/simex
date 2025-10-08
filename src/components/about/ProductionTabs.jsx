@@ -1,0 +1,91 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import exp1 from "../../assets/production-imgs/cut1.webp";
+import exp2 from "../../assets/production-imgs/cut2.jpg";
+import exp3 from "../../assets/production-imgs/cut3.jpg";
+import cut1 from "../../assets/production-imgs/exp2.jpg";
+import cut2 from "../../assets/production-imgs/exp3.webp";
+import cut3 from "../../assets/production-imgs/sew1.jpg";
+import sew1 from "../../assets/production-imgs/cut2.jpg";
+import sew2 from "../../assets/production-imgs/cut2.jpg";
+import sew3 from "../../assets/production-imgs/cut2.jpg";
+import prod1 from "../../assets/production-imgs/cut2.jpg";
+import prod2 from "../../assets/production-imgs/cut2.jpg";
+import prod3 from "../../assets/production-imgs/cut2.jpg";
+
+const tabs = [
+  {
+    id: "experimental",
+    label: "EXPERIMENTAL SHOP",
+    images: [exp1, exp2, exp3],
+  },
+  {
+    id: "cutting",
+    label: "CUTTING SHOP",
+    images: [cut1, cut2, cut3],
+  },
+  {
+    id: "sewing",
+    label: "SEWING SHOP",
+    images: [sew1, sew2, sew3],
+  },
+  {
+    id: "production",
+    label: "PRODUCTION",
+    images: [prod1, prod2, prod3],
+  },
+];
+
+const ProductionTabs = () => {
+  const [activeTab, setActiveTab] = useState("experimental");
+
+  return (
+    <div className="max-w-7xl mx-auto">
+      {/* Tabs Header */}
+      <div className="flex flex-wrap justify-center gap-6 mb-10 border-b border-gray-300 pb-3">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`relative font-semibold text-sm sm:text-base md:text-lg transition-all duration-300 ${
+              activeTab === tab.id
+                ? "text-green-600"
+                : "text-gray-800 hover:text-green-500"
+            }`}
+          >
+            {tab.label}
+            {activeTab === tab.id && (
+              <motion.div
+                layoutId="underline"
+                className="absolute left-0 right-0 -bottom-1 h-[3px] bg-green-500 rounded-full"
+              />
+            )}
+          </button>
+        ))}
+      </div>
+
+      {/* Image Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {tabs
+          .find((t) => t.id === activeTab)
+          ?.images.map((img, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2, duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={img}
+                alt={`${activeTab}-${i}`}
+                className="rounded-xl shadow-md object-cover w-full h-[300px] md:h-[340px] hover:scale-[1.03] transition-transform duration-500"
+              />
+            </motion.div>
+          ))}
+      </div>
+    </div>
+  );
+};
+
+export default ProductionTabs;
