@@ -5,15 +5,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import woman1 from "../assets/woman1.jpg";
-import woman2 from "../assets/woman2.jpg";
-import woman3 from "../assets/woman3.jpg";
-import man1 from "../assets/man1.jpg";
-import man2 from "../assets/man2.jpg";
-import man3 from "../assets/man3.jpg";
-import child1 from "../assets/child1.jpg";
-import child2 from "../assets/child2.jpg";
-import child3 from "../assets/child3.jpg";
+import woman1 from "../../assets/home-images/woman1.jpg";
+import woman2 from "../../assets/home-images/woman2.jpg";
+import woman3 from "../../assets/home-images/woman3.jpg";
+import man1 from "../../assets/home-images/man1.jpg";
+import man2 from "../../assets/home-images/man2.jpg";
+import man3 from "../../assets/home-images/man3.jpg";
+import child1 from "../../assets/home-images/child1.jpg";
+import child2 from "../../assets/home-images/child2.jpg";
+import child3 from "../../assets/home-images/child3.jpg";
 
 function Production() {
   const products = [
@@ -50,21 +50,22 @@ function Production() {
   ];
 
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 text-center mb-10 md:mb-16">
+    <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-24 text-center mb-0 overflow-hidden">
       {/* Heading section */}
       <motion.div
+        layout
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        viewport={{ amount: 0.2 }}
+        viewport={{ once: true }}
         className="mb-10"
       >
-        <p className="text-green-600 uppercase tracking-widest mb-2">
+        <p className="text-sky-500 uppercase tracking-widest mb-2">
           Our Production
         </p>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+        <h2 className="text-4xl font-extrabold text-gray-900">
           Eco{" "}
-          <span className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 bg-clip-text text-transparent">
             Friendly Product
           </span>
         </h2>
@@ -72,10 +73,11 @@ function Production() {
 
       {/* Swiper section */}
       <motion.div
+        layout
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        viewport={{ amount: 0.2 }}
+        viewport={{ once: true }}
         className="max-w-6xl mx-auto"
       >
         <Swiper
@@ -89,7 +91,7 @@ function Production() {
         >
           <style>{`
             :root {
-              --swiper-navigation-color: #ffffff !important;
+              --swiper-navigation-color: #0ea5e9 !important;
               --swiper-navigation-size: 20px;
             }
             .swiper-button-prev, .swiper-button-next {
@@ -103,14 +105,14 @@ function Production() {
               transition: all 0.3s ease-in-out !important;
             }
             .swiper-button-prev::after, .swiper-button-next::after {
-              color: var(--swiper-navigation-color) !important;
+              color: #0ea5e9 !important;
               font-size: 20px !important;
               font-weight: bold !important;
               transition: color 0.3s ease !important;
             }
             .swiper-button-prev:hover::after,
             .swiper-button-next:hover::after {
-              color: #16a34a !important;
+              color: #0284c7 !important;
             }
             @media (max-width: 768px) {
               .swiper-button-prev, .swiper-button-next {
@@ -147,7 +149,7 @@ function Production() {
                 </h3>
                 <a
                   href="#"
-                  className="text-green-600 hover:text-green-700 font-normal text-sm transition"
+                  className="text-sky-500 hover:text-sky-600 font-normal text-sm transition"
                 >
                   More →
                 </a>
