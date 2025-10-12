@@ -10,7 +10,6 @@ import qualityImg from "../assets/quality.jpg";
 import Production from "../components/Production";
 import Partners from "../components/Partners";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -329,7 +328,6 @@ function Home() {
       <Production />
       <Partners />
       <Contact />
-      <Footer />
     </>
   );
 }
