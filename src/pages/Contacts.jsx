@@ -1,4 +1,4 @@
-import contactBg from "../assets/about.jpg";
+import contactBg from "../assets/cuntact_img2.avif";
 import Location from "../components/contact/Location";
 const Contact = () => {
   return (
