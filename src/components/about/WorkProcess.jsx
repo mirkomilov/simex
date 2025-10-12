@@ -77,15 +77,16 @@ const WorkProcessSection = () => {
   const visibleSteps = showAll ? steps : steps.slice(0, 2);
 
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50">
+    <section className="py-20 px-5 sm:px-8 md:px-12 lg:px-24 bg-gray-50">
+      {/* Title */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
           How We{" "}
-          <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
             Work With Orders
           </span>
         </h2>
-        <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+        <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
           From first contact to final delivery — each step of our production
           process is transparent, efficient, and built on quality.
         </p>
@@ -100,14 +101,16 @@ const WorkProcessSection = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.4 }}
-              className="flex items-start gap-6 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full shadow-md flex-shrink-0">
+              {/* Icon */}
+              <div className="flex items-center justify-center w-12 h-12 bg-sky-500 text-white rounded-full shadow-md flex-shrink-0">
                 {icon}
               </div>
 
+              {/* Text */}
               <div>
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-1">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">
                   {id}. {title}
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
@@ -119,10 +122,10 @@ const WorkProcessSection = () => {
         </AnimatePresence>
 
         {/* Toggle Button */}
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-10">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="flex items-center gap-2 text-green-600 font-semibold hover:text-green-700 transition"
+            className="flex items-center gap-2 text-sky-600 font-semibold hover:text-sky-700 transition text-sm sm:text-base"
           >
             {showAll ? (
               <>

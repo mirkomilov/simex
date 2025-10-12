@@ -2,29 +2,29 @@
    VARIABLES (from SCSS)
 ======================= */
 :root {
-  --cOne: #31640c;
-  --cTwo: #75b31e;
-  --cThree: #f98600;
-  --cFour: #0085ff;
-  --cFive: #fff;
+  --cOne: #0ea5e9; /* sky-500 */
+  --cTwo: #0369a1; /* sky-700 */
+  --cThree: #f59e0b; /* amber-500 */
+  --cFour: #38bdf8; /* sky-400 */
+  --cFive: #ffffff;
 
-  --cLink: #947acb;
+  --cLink: #60a5fa;
   --mShadow: #00000050;
   --menuHeight: 80px;
   --transition: cubic-bezier(0.51, 0.26, 0.21, 1.36);
 
-  --blue: #0d6efd;
+  --blue: #0ea5e9;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #d63384;
   --danger: #dc3545;
-  --orange: #fd7e14;
-  --warning: #ffc107;
-  --green: #198754;
-  --teal: #20c997;
+  --orange: #f97316;
+  --warning: #facc15;
+  --green: #22c55e;
+  --teal: #2dd4bf;
   --cyan: #9ed9ff;
   --muted: #9da4ae;
-  --dark: #343a40;
+  --dark: #1e293b;
 }
 
 /* =======================
@@ -76,7 +76,7 @@
 .svgmap #myWindow .germany,
 .svgmap #myWindow .Lithuania {
   transition: 0.3s;
-  fill: #cdcdcd;
+  fill: #d1d5db; /* gray-300 */
 }
 
 .svgmap #myWindow .Russian:hover,
@@ -87,7 +87,7 @@
 .svgmap #myWindow .uzbekistan:hover,
 .svgmap #myWindow .germany:hover,
 .svgmap #myWindow .Lithuania:hover {
-  fill: var(--cOne);
+  fill: var(--cOne); /* sky hover */
 }
 
 .svgmap .russian__hover,

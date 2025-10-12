@@ -16,15 +16,15 @@ export const Map = () => {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 bg-[#f4f6fa] select-none">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-wide">
+    <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50 select-none">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
           EXPORT{" "}
-          <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
             GEOGRAPHY
           </span>
         </h2>
-        <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+        <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
           Our export network covers multiple countries across Europe and Asia.
         </p>
       </div>
