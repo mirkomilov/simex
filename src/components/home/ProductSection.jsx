@@ -36,15 +36,21 @@ function Production() {
   const groups = [
     {
       title: t("production.women"),
-      items: products.filter((p) => p.title === t("production.women")).map((i) => i.image),
+      items: products
+        .filter((p) => p.title === t("production.women"))
+        .map((i) => i.image),
     },
     {
       title: t("production.men"),
-      items: products.filter((p) => p.title === t("production.men")).map((i) => i.image),
+      items: products
+        .filter((p) => p.title === t("production.men"))
+        .map((i) => i.image),
     },
     {
       title: t("production.children"),
-      items: products.filter((p) => p.title === t("production.children")).map((i) => i.image),
+      items: products
+        .filter((p) => p.title === t("production.children"))
+        .map((i) => i.image),
     },
   ];
 
@@ -143,20 +149,18 @@ function Production() {
                 </h3>
                 <button
                   onClick={() => {
-                    if (group.title === "Women's clothing") {
+                    if (group.title === t("production.women")) {
                       navigate("/products#woman");
-                    } else if (group.title === "Men's clothing") {
+                    } else if (group.title === t("production.men")) {
                       navigate("/products#man");
-                    } else if (group.title === "Children's clothing") {
+                    } else if (group.title === t("production.children")) {
                       navigate("/products#child");
                     }
                   }}
                   className="text-sky-500 hover:text-sky-600 font-normal text-sm transition"
                 >
-                  More →
-                </button>
                   {t("production.more")} →
-                </a>
+                </button>
               </div>
             </SwiperSlide>
           ))}
