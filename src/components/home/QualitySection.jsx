@@ -87,15 +87,8 @@ export default function QualitySection() {
           }}
           className="inline-block bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-sky-600 hover:to-sky-700 transition-all duration-300 text-base md:text-lg"
         >
-          More →
-        </button>
-
-        <a
-          href="#"
-          className="inline-block bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-sky-600 hover:to-sky-700 transition-all duration-300 text-base md:text-lg"
-        >
           {t("quality.button")} →
-        </a>
+        </button>
 
         {/* Counters */}
         <div className="flex justify-center lg:justify-start gap-12 mt-8">
