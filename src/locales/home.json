@@ -1,0 +1,29 @@
+{
+  "en": {
+    "hero": {
+      "subtitle": "Production Platform",
+      "title": "SIMEX PROGRESS",
+      "slogan": "Quality and Production on Time",
+      "description": "Simex Progress has been supplying quality products to many major clothing brands since 2008. Our services cover the full supply chain from knitting fabric to finished garments and knitwear.",
+      "button": "More"
+    }
+  },
+  "uz": {
+    "hero": {
+      "subtitle": "Ishlab chiqarish platformasi",
+      "title": "SIMEX PROGRESS",
+      "slogan": "Sifat va o‘z vaqtida ishlab chiqarish",
+      "description": "Simex Progress 2008-yildan buyon ko‘plab yirik kiyim brendlariga sifatli mahsulot yetkazib beradi. Bizning xizmatlarimiz to‘qimachilikdan tayyor kiyim va trikotajgacha bo‘lgan to‘liq ishlab chiqarish zanjirini qamrab oladi.",
+      "button": "Batafsil"
+    }
+  },
+  "ru": {
+    "hero": {
+      "subtitle": "Производственная платформа",
+      "title": "SIMEX PROGRESS",
+      "slogan": "Качество и своевременное производство",
+      "description": "Simex Progress поставляет качественную продукцию многим известным брендам одежды с 2008 года. Наши услуги охватывают весь производственный цикл — от вязания ткани до готовой одежды и трикотажа.",
+      "button": "Подробнее"
+    }
+  }
+}

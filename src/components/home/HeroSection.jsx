@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // 🔥 qo‘shildi
 import heroBg from "../../assets/home-images/hero-bg.jpg";
 
 export default function HeroSection() {
   const navigate = useNavigate();
+  const { t } = useTranslation(); // 🔥 tarjima funksiyasi
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -20,7 +22,7 @@ export default function HeroSection() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.42, 0, 0.58, 1], // smoother cubic ease
+        ease: [0.42, 0, 0.58, 1],
       },
     },
   };
@@ -46,30 +48,28 @@ export default function HeroSection() {
           className="text-sky-500 tracking-widest uppercase text-base md:text-lg mb-4 font-semibold"
           variants={itemVariants}
         >
-          Production Platform
+          {t("hero.subtitle")}
         </motion.p>
 
         <motion.h1
           className="text-4xl md:text-6xl font-extrabold leading-tight mb-6"
           variants={itemVariants}
         >
-          SIMEX PROGRESS
+          {t("hero.title")}
         </motion.h1>
 
         <motion.h2
           className="text-2xl md:text-4xl font-semibold mb-6 tracking-tight"
           variants={itemVariants}
         >
-          Quality and Production on Time
+          {t("hero.slogan")}
         </motion.h2>
 
         <motion.p
           className="text-white text-base md:text-lg mb-8 max-w-xl leading-relaxed"
           variants={itemVariants}
         >
-          Simex Progress has been supplying quality products to many major
-          clothing brands since 2008. Our services cover the full supply chain
-          from knitting fabric to finished garments and knitwear.
+          {t("hero.description")}
         </motion.p>
 
         <motion.button
@@ -79,7 +79,7 @@ export default function HeroSection() {
           whileTap={{ scale: 0.95 }}
           variants={itemVariants}
         >
-          More →
+          {t("hero.button")} →
         </motion.button>
       </motion.div>
     </section>

@@ -36,7 +36,9 @@ function Footer() {
             Leader in the production of stylish clothes in Uzbekistan.
           </p>
           <a
-            href="/documents"
+            href="/docs/test.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sky-400 text-[14.5px] mt-3 inline-block hover:text-sky-300 transition-colors duration-300"
           >
             View company documentation →

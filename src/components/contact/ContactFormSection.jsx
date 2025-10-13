@@ -5,12 +5,8 @@ const ContactFormSection = () => {
   return (
     <section className="bg-[#f4f6fa] pb-20 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-        {/* LEFT SIDE — MAP / LOCATION */}
-        <div className="rounded-2xl overflow-hidden shadow-md h-full min-h-[500px] flex">
-          <Location />
-        </div>
-
-        {/* RIGHT SIDE — CONTACT FORM */}
+        
+        {/* LEFT SIDE — CONTACT FORM */}
         <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-md flex flex-col justify-center h-full min-h-[500px]">
           <h4 className="text-sky-600 uppercase font-semibold tracking-widest mb-2">
             Contact us
@@ -61,7 +57,7 @@ const ContactFormSection = () => {
                 htmlFor="phone"
                 className="text-sm font-medium text-gray-700 mb-1"
               >
-                Phone<span className="text-red-500">*</span>
+                Phone
               </label>
               <input
                 type="number"
@@ -97,6 +93,11 @@ const ContactFormSection = () => {
               Send
             </button>
           </form>
+        </div>
+
+        {/* RIGHT SIDE — MAP / LOCATION */}
+        <div className="rounded-2xl overflow-hidden shadow-md h-full min-h-[500px] flex">
+          <Location />
         </div>
       </div>
     </section>

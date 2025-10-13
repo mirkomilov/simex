@@ -1,0 +1,20 @@
+{
+  "en": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contacts": "Contacts"
+  },
+  "uz": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "products": "Mahsulotlar",
+    "contacts": "Aloqa"
+  },
+  "ru": {
+    "home": "Главная",
+    "about": "О нас",
+    "products": "Продукты",
+    "contacts": "Контакты"
+  }
+}
