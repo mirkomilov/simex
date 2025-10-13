@@ -16,31 +16,6 @@ import prod2 from "../../assets/production-imgs/p2.webp";
 import prod3 from "../../assets/production-imgs/p3.webp";
 import { div, section } from "framer-motion/client";
 
-const tabs = [
-  {
-    id: "experimental",
-    label: "EXPERIMENTAL SHOP",
-    images: [exp1, exp2, exp3],
-  },
-  {
-    id: "cutting",
-    label: "CUTTING SHOP",
-    images: [cut1, cut2, cut3],
-  },
-  {
-    id: "sewing",
-    label: "SEWING SHOP",
-    images: [sew1, sew2, sew3],
-  },
-  {
-    id: "production",
-    label: "PRODUCTION",
-    images: [prod1, prod2, prod3],
-  },
-];
-import prod1 from "../../assets/production-imgs/cut2.jpg";
-import prod2 from "../../assets/production-imgs/cut2.jpg";
-import prod3 from "../../assets/production-imgs/cut2.jpg";
 
 const ProductionTabs = () => {
   const { t } = useTranslation(); // ✅
