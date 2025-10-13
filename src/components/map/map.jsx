@@ -1,31 +1,33 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./map.css";
 
 export const Map = () => {
+  const { t } = useTranslation(); // ✅
   const [hovered, setHovered] = useState(null);
 
   const countries = [
-    { name: "Russia", class: "Russian" },
-    { name: "Tajikistan", class: "tajikistan" },
-    { name: "Kazakhstan", class: "kazakhstan" },
-    { name: "Belarus", class: "belarus" },
-    { name: "Poland", class: "poland" },
-    { name: "Uzbekistan", class: "uzbekistan" },
-    { name: "Germany", class: "germany" },
-    { name: "Lithuania", class: "Lithuania" },
+    { name: t("map.russia"), class: "russian" },
+    { name: t("map.tajikistan"), class: "tajikistan" },
+    { name: t("map.kazakhstan"), class: "kazakhstan" },
+    { name: t("map.belarus"), class: "belarus" },
+    { name: t("map.poland"), class: "poland" },
+    { name: t("map.uzbekistan"), class: "uzbekistan" },
+    { name: t("map.germany"), class: "germany" },
+    { name: t("map.lithuania"), class: "lithuania" },
   ];
 
   return (
     <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50 select-none">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
-          EXPORT{" "}
+          {t("map.titlePrefix")}{" "}
           <span className="bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
-            GEOGRAPHY
+            {t("map.titleHighlight")}
           </span>
         </h2>
         <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
-          Our export network covers multiple countries across Europe and Asia.
+           {t("map.subtitle")}
         </p>
       </div>
       <div className="svgmap">

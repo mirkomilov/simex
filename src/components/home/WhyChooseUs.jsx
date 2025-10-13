@@ -1,28 +1,10 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function WhyChooseUs() {
-  const features = [
-    {
-      title: "High Quality",
-      description:
-        "Strict quality control ensures the best quality of our products.",
-    },
-    {
-      title: "Beneficial Cooperation",
-      description:
-        "We improve processes for long-term partnerships and affordable prices.",
-    },
-    {
-      title: "Speed",
-      description:
-        "80% of orders delivered ahead of schedule thanks to optimized workflow.",
-    },
-    {
-      title: "Expertise",
-      description:
-        "Experience in exporting and logistics assistance from Uzbekistan.",
-    },
-  ];
+  const { t } = useTranslation();
+
+  const features = t("whyChoose.features", { returnObjects: true });
 
   const container = {
     hidden: { opacity: 0, scale: 0.98 },
@@ -51,14 +33,13 @@ export default function WhyChooseUs() {
     <section id="features" className="bg-gray-50 py-20 px-6 md:px-12 lg:px-24">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-extrabold text-gray-900">
-          Why{" "}
+          {t("whyChoose.titlePrefix")}{" "}
           <span className="bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
-            Choose Us
+            {t("whyChoose.titleHighlight")}
           </span>
         </h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
-          We provide reliable quality, speed, and long-term cooperation with our
-          partners worldwide.
+          {t("whyChoose.subtitle")}
         </p>
       </div>
 

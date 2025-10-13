@@ -3,18 +3,75 @@
     "home": "Home",
     "about": "About",
     "products": "Products",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "footer": {
+      "about": {
+        "description": "Leader in the production of stylish clothes in Uzbekistan.",
+        "docLink": "Privacy Policy"
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "home": "Home",
+          "about": "About",
+          "products": "Products",
+          "contacts": "Contacts"
+        }
+      },
+      "contact": {
+        "title": "Contact us",
+        "address": "Tashkent city, Sergeli district, Kumaryk-3, building 88"
+      }
+    }
   },
   "uz": {
     "home": "Bosh sahifa",
     "about": "Biz haqimizda",
     "products": "Mahsulotlar",
-    "contacts": "Aloqa"
+    "contacts": "Aloqa",
+    "footer": {
+      "about": {
+        "description": "O‘zbekistonning zamonaviy kiyim ishlab chiqarish yetakchisi.",
+        "docLink": "Maxfiylik siyosati"
+      },
+      "company": {
+        "title": "Kompaniya",
+        "links": {
+          "home": "Bosh sahifa",
+          "about": "Biz haqimizda",
+          "products": "Mahsulotlar",
+          "contacts": "Aloqa"
+        }
+      },
+      "contact": {
+        "title": "Biz bilan bog‘laning",
+        "address": "Toshkent shahri, Sergeli tumani, Kumaryk-3, 88-bino"
+      }
+    }
   },
   "ru": {
     "home": "Главная",
     "about": "О нас",
     "products": "Продукты",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "footer": {
+      "about": {
+        "description": "Лидер в производстве стильной одежды в Узбекистане.",
+        "docLink": "Политика конфеденциальности"
+      },
+      "company": {
+        "title": "Компания",
+        "links": {
+          "home": "Главная",
+          "about": "О нас",
+          "products": "Продукция",
+          "contacts": "Контакты"
+        }
+      },
+      "contact": {
+        "title": "Свяжитесь с нами",
+        "address": "г. Ташкент, Сергелийский район, Кумарык-3, дом 88"
+      }
+    }
   }
 }

@@ -6,6 +6,68 @@
       "slogan": "Quality and Production on Time",
       "description": "Simex Progress has been supplying quality products to many major clothing brands since 2008. Our services cover the full supply chain from knitting fabric to finished garments and knitwear.",
       "button": "More"
+    },
+    "whyChoose": {
+      "titlePrefix": "Why",
+      "titleHighlight": "Choose Us",
+      "subtitle": "We provide reliable quality, speed, and long-term cooperation with our partners worldwide.",
+      "features": [
+        {
+          "title": "High Quality",
+          "description": "Strict quality control ensures the best quality of our products."
+        },
+        {
+          "title": "Beneficial Cooperation",
+          "description": "We improve processes for long-term partnerships and affordable prices."
+        },
+        {
+          "title": "Speed",
+          "description": "80% of orders delivered ahead of schedule thanks to optimized workflow."
+        },
+        {
+          "title": "Expertise",
+          "description": "Experience in exporting and logistics assistance from Uzbekistan."
+        }
+      ]
+    },
+    "quality": {
+      "titlePrefix": "Quality You",
+      "titleHighlight": "Can Trust",
+      "description": "We are committed to maintaining the highest standards in every aspect of our production process to ensure the best results for our clients.",
+      "button": "More",
+      "counter1": "Pcs per month",
+      "counter2": "Sewing machines",
+      "counter3": "Staff"
+    },
+    "production": {
+      "subtitle": "Our Production",
+      "titlePrefix": "Eco",
+      "titleHighlight": "Friendly Product",
+      "women": "Women's clothing",
+      "men": "Men's clothing",
+      "children": "Children's clothing",
+      "more": "More"
+    },
+    "partners": {
+      "titlePrefix": "Our",
+      "titleHighlight": "Partners"
+    },
+     "contact": {
+      "subtitle": "Contact Us",
+      "titlePrefix": "Let’s start",
+      "titleHighlight": "today!",
+      "description": "Have any questions, ideas, or collaboration proposals? Fill out the form and we’ll get back to you shortly.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "Phone number",
+      "companyLabel": "Company (optional)",
+      "companyPlaceholder": "Your company",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Write your message...",
+      "sendButton": "Send Message"
     }
   },
   "uz": {
@@ -15,6 +77,68 @@
       "slogan": "Sifat va o‘z vaqtida ishlab chiqarish",
       "description": "Simex Progress 2008-yildan buyon ko‘plab yirik kiyim brendlariga sifatli mahsulot yetkazib beradi. Bizning xizmatlarimiz to‘qimachilikdan tayyor kiyim va trikotajgacha bo‘lgan to‘liq ishlab chiqarish zanjirini qamrab oladi.",
       "button": "Batafsil"
+    },
+    "whyChoose": {
+      "titlePrefix": "Nima uchun",
+      "titleHighlight": "bizni tanlashadi",
+      "subtitle": "Biz ishonchli sifat, tezlik va uzoq muddatli hamkorlikni ta’minlaymiz.",
+      "features": [
+        {
+          "title": "Yuqori sifat",
+          "description": "Qattiq sifat nazorati mahsulotlarimizning eng yaxshi sifatini kafolatlaydi."
+        },
+        {
+          "title": "Foydali hamkorlik",
+          "description": "Uzoq muddatli hamkorlik va maqbul narxlar uchun jarayonlarni doimiy takomillashtiramiz."
+        },
+        {
+          "title": "Tezkorlik",
+          "description": "Buyurtmalarning 80% qismini jadvaldan oldin yetkazib beramiz — optimallashtirilgan ish jarayonlari tufayli."
+        },
+        {
+          "title": "Tajriba",
+          "description": "Eksport va logistika bo‘yicha O‘zbekistondan ko‘p yillik tajribaga egamiz."
+        }
+      ]
+    },
+    "quality": {
+      "titlePrefix": "Ishonchli",
+      "titleHighlight": "sifat",
+      "description": "Biz har bir ishlab chiqarish bosqichida eng yuqori standartlarni saqlab, mijozlarimiz uchun eng yaxshi natijalarni ta'minlaymiz.",
+      "button": "Batafsil",
+      "counter1": "Oyiga dona",
+      "counter2": "Tikuv mashinalari",
+      "counter3": "Xodimlar"
+    },
+    "production": {
+      "subtitle": "Bizning ishlab chiqarish",
+      "titlePrefix": "Ekologik",
+      "titleHighlight": "toza mahsulotlar",
+      "women": "Ayollar kiyimlari",
+      "men": "Erkaklar kiyimlari",
+      "children": "Bolalar kiyimlari",
+      "more": "Batafsil"
+    },
+    "partners": {
+      "titlePrefix": "Bizning",
+      "titleHighlight": "hamkorlar"
+    },
+    "contact": {
+      "subtitle": "Biz bilan bog‘laning",
+      "titlePrefix": "Keling boshlaymiz",
+      "titleHighlight": "bugun!",
+      "description": "Savolingiz, g‘oyangiz yoki hamkorlik taklifingiz bormi? Formani to‘ldiring, tez orada siz bilan bog‘lanamiz.",
+      "nameLabel": "Ism",
+      "namePlaceholder": "Ismingizni kiriting",
+      "emailLabel": "Email",
+      "emailPlaceholder": "siz@example.com",
+      "phoneLabel": "Telefon",
+      "phonePlaceholder": "Telefon raqamingiz",
+      "companyLabel": "Kompaniya (ixtiyoriy)",
+      "companyPlaceholder": "Kompaniyangiz nomi",
+      "messageLabel": "Xabar",
+      "messagePlaceholder": "Xabaringizni yozing...",
+      "sendButton": "Xabar yuborish"
     }
   },
   "ru": {
@@ -24,6 +148,68 @@
       "slogan": "Качество и своевременное производство",
       "description": "Simex Progress поставляет качественную продукцию многим известным брендам одежды с 2008 года. Наши услуги охватывают весь производственный цикл — от вязания ткани до готовой одежды и трикотажа.",
       "button": "Подробнее"
+    },
+    "whyChoose": {
+      "titlePrefix": "Почему",
+      "titleHighlight": "выбирают нас",
+      "subtitle": "Мы обеспечиваем надежное качество, скорость и долгосрочное сотрудничество с нашими партнерами по всему миру.",
+      "features": [
+        {
+          "title": "Высокое качество",
+          "description": "Строгий контроль качества гарантирует лучшее качество нашей продукции."
+        },
+        {
+          "title": "Выгодное сотрудничество",
+          "description": "Мы совершенствуем процессы для долгосрочных партнерских отношений и доступных цен."
+        },
+        {
+          "title": "Скорость",
+          "description": "80% заказов доставляются раньше срока благодаря оптимизированному рабочему процессу."
+        },
+        {
+          "title": "Экспертиза",
+          "description": "Опыт в области экспорта и логистики из Узбекистана."
+        }
+      ]
+    },
+    "quality": {
+      "titlePrefix": "Качество, которому",
+      "titleHighlight": "можно доверять",
+      "description": "Мы стремимся поддерживать самые высокие стандарты на каждом этапе производства, чтобы обеспечить наилучшие результаты для наших клиентов.",
+      "button": "Подробнее",
+      "counter1": "Штук в месяц",
+      "counter2": "Швейные машины",
+      "counter3": "Сотрудники"
+    },
+    "production": {
+      "subtitle": "Наше производство",
+      "titlePrefix": "Экологически",
+      "titleHighlight": "чистая продукция",
+      "women": "Женская одежда",
+      "men": "Мужская одежда",
+      "children": "Детская одежда",
+      "more": "Подробнее"
+    },
+    "partners": {
+      "titlePrefix": "Наши",
+      "titleHighlight": "партнёры"
+    },
+     "contact": {
+      "subtitle": "Свяжитесь с нами",
+      "titlePrefix": "Давайте начнем",
+      "titleHighlight": "сегодня!",
+      "description": "Есть вопросы, идеи или предложения о сотрудничестве? Заполните форму, и мы свяжемся с вами в ближайшее время.",
+      "nameLabel": "Имя",
+      "namePlaceholder": "Введите ваше имя",
+      "emailLabel": "Электронная почта",
+      "emailPlaceholder": "вы@example.com",
+      "phoneLabel": "Телефон",
+      "phonePlaceholder": "Номер телефона",
+      "companyLabel": "Компания (необязательно)",
+      "companyPlaceholder": "Ваша компания",
+      "messageLabel": "Сообщение",
+      "messagePlaceholder": "Напишите свое сообщение...",
+      "sendButton": "Отправить сообщение"
     }
   }
 }

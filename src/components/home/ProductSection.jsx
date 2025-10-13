@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useTranslation } from "react-i18next"; // ✅ tarjima
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,42 +17,38 @@ import child2 from "../../assets/home-images/child2.jpg";
 import child3 from "../../assets/home-images/child3.jpg";
 
 function Production() {
+  const { t } = useTranslation(); // ✅ i18next qo‘shildi
+
   const products = [
-    { image: woman1, title: "Women's clothing" },
-    { image: woman2, title: "Women's clothing" },
-    { image: woman3, title: "Women's clothing" },
-    { image: man1, title: "Men's clothing" },
-    { image: man2, title: "Men's clothing" },
-    { image: man3, title: "Men's clothing" },
-    { image: child1, title: "Children's clothing" },
-    { image: child2, title: "Children's clothing" },
-    { image: child3, title: "Children's clothing" },
+    { image: woman1, title: t("production.women") },
+    { image: woman2, title: t("production.women") },
+    { image: woman3, title: t("production.women") },
+    { image: man1, title: t("production.men") },
+    { image: man2, title: t("production.men") },
+    { image: man3, title: t("production.men") },
+    { image: child1, title: t("production.children") },
+    { image: child2, title: t("production.children") },
+    { image: child3, title: t("production.children") },
   ];
 
   const groups = [
     {
-      title: "Women's clothing",
-      items: products
-        .filter((p) => p.title === "Women's clothing")
-        .map((i) => i.image),
+      title: t("production.women"),
+      items: products.filter((p) => p.title === t("production.women")).map((i) => i.image),
     },
     {
-      title: "Men's clothing",
-      items: products
-        .filter((p) => p.title === "Men's clothing")
-        .map((i) => i.image),
+      title: t("production.men"),
+      items: products.filter((p) => p.title === t("production.men")).map((i) => i.image),
     },
     {
-      title: "Children's clothing",
-      items: products
-        .filter((p) => p.title === "Children's clothing")
-        .map((i) => i.image),
+      title: t("production.children"),
+      items: products.filter((p) => p.title === t("production.children")).map((i) => i.image),
     },
   ];
 
   return (
     <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-24 text-center mb-0 overflow-hidden">
-      {/* Heading section */}
+      {/* Heading */}
       <motion.div
         layout
         initial={{ opacity: 0, y: 40 }}
@@ -61,17 +58,17 @@ function Production() {
         className="mb-10"
       >
         <p className="text-sky-500 uppercase tracking-widest mb-2">
-          Our Production
+          {t("production.subtitle")}
         </p>
         <h2 className="text-4xl font-extrabold text-gray-900">
-          Eco{" "}
+          {t("production.titlePrefix")}{" "}
           <span className="bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 bg-clip-text text-transparent">
-            Friendly Product
+            {t("production.titleHighlight")}
           </span>
         </h2>
       </motion.div>
 
-      {/* Swiper section */}
+      {/* Swiper */}
       <motion.div
         layout
         initial={{ opacity: 0, y: 60 }}
@@ -114,12 +111,6 @@ function Production() {
             .swiper-button-next:hover::after {
               color: #0284c7 !important;
             }
-            @media (max-width: 768px) {
-              .swiper-button-prev, .swiper-button-next {
-                width: 32px !important;
-                height: 32px !important;
-              }
-            }
           `}</style>
 
           {groups.map((group, idx) => (
@@ -142,7 +133,6 @@ function Production() {
                 ))}
               </div>
 
-              {/* Title + link */}
               <div className="mt-1 md:mt-2 text-center">
                 <h3 className="font-semibold text-base md:text-lg text-gray-800 mb-1">
                   {group.title}
@@ -151,7 +141,7 @@ function Production() {
                   href="#"
                   className="text-sky-500 hover:text-sky-600 font-normal text-sm transition"
                 >
-                  More →
+                  {t("production.more")} →
                 </a>
               </div>
             </SwiperSlide>

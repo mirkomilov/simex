@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next"; 
 import WhatsappIcon from "../assets/footer-images/whatsapp.svg";
 import InstagramIcon from "../assets/footer-images/instagram.svg";
 import TelegramIcon from "../assets/footer-images/telegram.svg";
@@ -7,6 +8,8 @@ import FacebookIcon from "../assets/footer-images/facebook.svg";
 import LinkedinIcon from "../assets/footer-images/linkedin.svg";
 
 function Footer() {
+  const { t } = useTranslation();
+
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
@@ -15,9 +18,6 @@ function Footer() {
       style={{
         backgroundImage:
           "linear-gradient(180deg, rgba(12, 70, 150, 0.98) 0%, rgba(5, 35, 90, 0.98) 100%)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="relative z-10 py-16 px-6 md:px-12 max-w-6xl mx-auto grid md:grid-cols-[1fr_0.8fr_1fr] gap-10 items-start justify-between md:text-left text-center">
@@ -33,22 +33,22 @@ function Footer() {
             </Link>
           </h3>
           <p className="text-[14.5px] text-gray-200 leading-relaxed">
-            Leader in the production of stylish clothes in Uzbekistan.
+            {t("footer.about.description")}
           </p>
           <a
-            href="/docs/test.pdf"
+            href="/docs/document.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-400 text-[14.5px] mt-3 inline-block hover:text-sky-300 transition-colors duration-300"
           >
-            View company documentation →
+            {t("footer.about.docLink")} →
           </a>
         </div>
 
         {/* 2️⃣ Company Section */}
         <div className="flex flex-col justify-start space-y-4 md:pl-8">
           <h3 className="text-xl font-semibold text-white mb-3 tracking-wide">
-            Company
+            {t("footer.company.title")}
           </h3>
           <ul className="space-y-2 text-[14.5px] text-gray-200">
             <li>
@@ -56,7 +56,7 @@ function Footer() {
                 to="/home"
                 className="hover:text-sky-300 transition-colors duration-300"
               >
-                Home
+                {t("footer.company.links.home")}
               </Link>
             </li>
             <li>
@@ -64,7 +64,7 @@ function Footer() {
                 to="/about"
                 className="hover:text-sky-300 transition-colors duration-300"
               >
-                About
+                {t("footer.company.links.about")}
               </Link>
             </li>
             <li>
@@ -72,7 +72,7 @@ function Footer() {
                 to="/products"
                 className="hover:text-sky-300 transition-colors duration-300"
               >
-                Products
+                {t("footer.company.links.products")}
               </Link>
             </li>
             <li>
@@ -80,7 +80,7 @@ function Footer() {
                 to="/contacts"
                 className="hover:text-sky-300 transition-colors duration-300"
               >
-                Contacts
+                {t("footer.company.links.contacts")}
               </Link>
             </li>
           </ul>
@@ -89,7 +89,7 @@ function Footer() {
         {/* 3️⃣ Contact Section */}
         <div className="flex flex-col justify-start space-y-4 md:pl-6">
           <h3 className="text-xl font-semibold text-white mb-3 tracking-wide">
-            Contact us
+            {t("footer.contact.title")}
           </h3>
           <p className="text-[14.5px] text-gray-200 leading-relaxed">
             +998 90 955 55 70
@@ -135,7 +135,7 @@ function Footer() {
           </div>
 
           <p className="text-[14.5px] text-gray-200 leading-relaxed">
-            Tashkent city, Sergeli district, Kumaryk-3, building 88
+            {t("footer.contact.address")}
           </p>
         </div>
       </div>

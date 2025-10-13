@@ -1,0 +1,86 @@
+{
+  "en": {
+    "productHero": {
+      "title": "Product",
+      "description": "Simex Progress offers tailoring of ready-made knitwear. The range includes men’s, women’s and children’s products. Simex Progress uses the following fabrics in the production of clothing: single jersey, footer, ribana, interlock, pique, velour, etc."
+    },
+    "productSection": {
+      "titlePrefix": "Our",
+      "titleHighlight": "Production",
+      "subtitle": "Simex Progress offers tailoring of ready-made knitwear for men, women, and children.",
+      "sections": [
+        {
+          "title": "Women’s Clothing",
+          "description": "Our range for women includes T-shirts, dresses, sweatshirts, hoodies, and tracksuits. Made from 100% cotton, our garments come in hundreds of designs, styles, and finishes with various knitted fabrics for premium comfort.",
+          "image": "/src/assets/products-images/woman.jpg"
+        },
+        {
+          "title": "Men’s Clothing",
+          "description": "We focus on comfort, durability, and natural fabrics for men’s fashion — providing stylish and breathable garments designed for active lifestyles.",
+          "image": "/src/assets/products-images/man.jpg"
+        },
+        {
+          "title": "Children’s Clothing",
+          "description": "Our kidswear collection combines modern design with safety and comfort — crafted from soft, eco-friendly materials that ensure quality and style.",
+          "image": "/src/assets/products-images/child.jpg"
+        }
+      ]
+    }
+  },
+  "uz": {
+    "productHero": {
+      "title": "Mahsulotlar",
+      "description": "Simex Progress tayyor trikotaj kiyimlarni tikish xizmatini taklif etadi. Sortiment erkaklar, ayollar va bolalar kiyimlaridan iborat. Kompaniya kiyim ishlab chiqarishda quyidagi matolardan foydalanadi: single jersey, footer, ribana, interlock, pique, velour va boshqalar."
+    },
+    "productSection": {
+      "titlePrefix": "Bizning",
+      "titleHighlight": "Ishlab chiqarish",
+      "subtitle": "Simex Progress erkaklar, ayollar va bolalar uchun tayyor trikotaj kiyimlarini tikish xizmatini taklif etadi.",
+      "sections": [
+        {
+          "title": "Ayollar kiyimlari",
+          "description": "Ayollar uchun assortimentda futbolkalar, ko‘ylaklar, svitshotlar, xudilar va sport kiyimlari mavjud. 100% paxtadan tayyorlangan kiyimlar turli dizayn, uslub va matolar bilan yuqori qulaylikni ta’minlaydi.",
+          "image": "/src/assets/products-images/woman.jpg"
+        },
+        {
+          "title": "Erkaklar kiyimlari",
+          "description": "Biz erkaklar uchun qulaylik, mustahkamlik va tabiiy matolarga e’tibor beramiz — faol hayot tarzi uchun zamonaviy va nafas oladigan kiyimlar taqdim etamiz.",
+          "image": "/src/assets/products-images/man.jpg"
+        },
+        {
+          "title": "Bolalar kiyimlari",
+          "description": "Bolalar uchun kolleksiyamiz zamonaviy dizayn, xavfsizlik va qulaylikni uyg‘unlashtiradi — yumshoq va ekologik toza materiallardan sifat va uslub uchun yaratilgan.",
+          "image": "/src/assets/products-images/child.jpg"
+        }
+      ]
+    }
+  },
+  "ru": {
+    "productHero": {
+      "title": "Продукция",
+      "description": "Simex Progress предлагает пошив готового трикотажа. Ассортимент включает мужскую, женскую и детскую одежду. В производстве используются ткани: single jersey, footer, ribana, interlock, pique, велюр и другие."
+    },
+    "productSection": {
+      "titlePrefix": "Наше",
+      "titleHighlight": "Производство",
+      "subtitle": "Simex Progress предлагает пошив готового трикотажа для мужчин, женщин и детей.",
+      "sections": [
+        {
+          "title": "Женская одежда",
+          "description": "Ассортимент для женщин включает футболки, платья, свитшоты, худи и спортивные костюмы. Изготовленные из 100% хлопка изделия обеспечивают комфорт и стиль благодаря разнообразию дизайнов и тканей.",
+          "image": "/src/assets/products-images/woman.jpg"
+        },
+        {
+          "title": "Мужская одежда",
+          "description": "Мы уделяем внимание комфорту, прочности и натуральным тканям — стильная и дышащая одежда для активного образа жизни.",
+          "image": "/src/assets/products-images/man.jpg"
+        },
+        {
+          "title": "Детская одежда",
+          "description": "Коллекция детской одежды сочетает современный дизайн, безопасность и комфорт — изделия из мягких, экологичных материалов обеспечивают качество и стиль.",
+          "image": "/src/assets/products-images/child.jpg"
+        }
+      ]
+    }
+  }
+}

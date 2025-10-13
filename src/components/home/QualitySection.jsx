@@ -1,5 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next"; // ✅ tarjima qo‘shildi
 import qualityImg from "../../assets/home-images/quality.jpg";
 
 const Counter = ({ from = 0, to, duration = 2000 }) => {
@@ -33,6 +34,8 @@ const Counter = ({ from = 0, to, duration = 2000 }) => {
 };
 
 export default function QualitySection() {
+  const { t } = useTranslation(); // ✅
+
   return (
     <motion.section
       id="quality"
@@ -55,20 +58,21 @@ export default function QualitySection() {
         }}
       >
         <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
-          Quality You{" "}
+          {t("quality.titlePrefix")}{" "}
           <span className="bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
-            Can Trust
+            {t("quality.titleHighlight")}
           </span>
         </h2>
+
         <p className="text-gray-600 mb-6">
-          We are committed to maintaining the highest standards in every aspect
-          of our production process to ensure the best results for our clients.
+          {t("quality.description")}
         </p>
+
         <a
           href="#"
           className="inline-block bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-sky-600 hover:to-sky-700 transition-all duration-300 text-base md:text-lg"
         >
-          More →
+          {t("quality.button")} →
         </a>
 
         {/* Counters */}
@@ -77,19 +81,19 @@ export default function QualitySection() {
             <p className="text-sky-500 text-3xl font-bold">
               <Counter to={1000000} duration={1500} />
             </p>
-            <p className="text-gray-600 text-sm">Pcs per month</p>
+            <p className="text-gray-600 text-sm">{t("quality.counter1")}</p>
           </div>
           <div className="text-center">
             <p className="text-sky-500 text-3xl font-bold">
               <Counter to={150} duration={1500} />
             </p>
-            <p className="text-gray-600 text-sm">Sewing machines</p>
+            <p className="text-gray-600 text-sm">{t("quality.counter2")}</p>
           </div>
           <div className="text-center">
             <p className="text-sky-500 text-3xl font-bold">
               <Counter to={200} duration={1500} />
             </p>
-            <p className="text-gray-600 text-sm">Staff</p>
+            <p className="text-gray-600 text-sm">{t("quality.counter3")}</p>
           </div>
         </div>
       </motion.div>

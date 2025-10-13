@@ -1,8 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next"; // ✅ qo‘shildi
 import teamImg from "../../assets/about3.avif";
 
 export default function CompanyInfo() {
+  const { t } = useTranslation(); // ✅ i18next
   const Counter = ({ from = 0, to, duration = 1500 }) => {
     const [count, setCount] = useState(from);
     const ref = useRef(null);
@@ -27,6 +29,12 @@ export default function CompanyInfo() {
     return <span ref={ref}>{count.toLocaleString()}</span>;
   };
 
+  const stats = [
+    { label: t("companyInfo.exportCountries"), value: 6, suffix: "+" },
+    { label: t("companyInfo.squareMeters"), value: 2800 },
+    { label: t("companyInfo.itemsExport"), value: 25, suffix: "+ mln" },
+  ];
+
   return (
     <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
@@ -46,11 +54,7 @@ export default function CompanyInfo() {
 
           {/* Statistikalar */}
           <div className="flex justify-center gap-8 mt-8 w-full">
-            {[
-              { label: "Export countries", value: 6, suffix: "+" },
-              { label: "Square meters", value: 2800 },
-              { label: "Items of export", value: 25, suffix: "+ mln" },
-            ].map(({ label, value, suffix }, i) => (
+            {stats.map(({ label, value, suffix }, i) => (
               <motion.div
                 key={label}
                 className="flex flex-col items-center"
@@ -95,28 +99,22 @@ export default function CompanyInfo() {
           className="space-y-6 text-left flex flex-col justify-center max-w-xl pt-2"
         >
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Who We{" "}
+            {t("companyInfo.titlePrefix")}{" "}
             <span className="bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
-              Are
+              {t("companyInfo.titleHighlight")}
             </span>
           </h1>
 
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-sky-600">
-            SIMEX PROGRESS – CLOTHING OF THE FUTURE
+            {t("companyInfo.subtitle")}
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Simex Progress has been supplying high quality products to many
-            major clothing brands since 2008. To date, the company has managed
-            to export more than 25 million products to the CIS countries and
-            Eastern Europe. Services include the supply chain from fabric to
-            finished products.
+            {t("companyInfo.paragraph1")}
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            The company's team consists of quality management (TQM)
-            professionals and is constantly improving its processes using
-            methods such as “Kaizen” and “Lean management”.
+            {t("companyInfo.paragraph2")}
           </p>
         </motion.div>
       </div>

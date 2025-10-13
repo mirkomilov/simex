@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"; // ✅ tarjima import qilindi
+
 import exp1 from "../../assets/production-imgs/cut1.webp";
 import exp2 from "../../assets/production-imgs/cut2.jpg";
 import exp3 from "../../assets/production-imgs/cut3.jpg";
@@ -12,33 +14,34 @@ import sew3 from "../../assets/production-imgs/s3.jpg";
 import prod1 from "../../assets/production-imgs/cut2.jpg";
 import prod2 from "../../assets/production-imgs/cut2.jpg";
 import prod3 from "../../assets/production-imgs/cut2.jpg";
-import { div, section } from "framer-motion/client";
-
-const tabs = [
-  {
-    id: "experimental",
-    label: "EXPERIMENTAL SHOP",
-    images: [exp1, exp2, exp3],
-  },
-  {
-    id: "cutting",
-    label: "CUTTING SHOP",
-    images: [cut1, cut2, cut3],
-  },
-  {
-    id: "sewing",
-    label: "SEWING SHOP",
-    images: [sew1, sew2, sew3],
-  },
-  {
-    id: "production",
-    label: "PRODUCTION",
-    images: [prod1, prod2, prod3],
-  },
-];
 
 const ProductionTabs = () => {
+  const { t } = useTranslation(); // ✅
   const [activeTab, setActiveTab] = useState("experimental");
+
+  // Tablar endi tarjima orqali olinadi
+  const tabs = [
+    {
+      id: "experimental",
+      label: t("productionTabs.experimental"),
+      images: [exp1, exp2, exp3],
+    },
+    {
+      id: "cutting",
+      label: t("productionTabs.cutting"),
+      images: [cut1, cut2, cut3],
+    },
+    {
+      id: "sewing",
+      label: t("productionTabs.sewing"),
+      images: [sew1, sew2, sew3],
+    },
+    {
+      id: "production",
+      label: t("productionTabs.production"),
+      images: [prod1, prod2, prod3],
+    },
+  ];
 
   return (
     <section className="bg-gray-50 py-20 px-6 md:px-12 lg:px-24">
@@ -46,7 +49,7 @@ const ProductionTabs = () => {
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 flex items-center justify-center gap-4">
           <span className="w-12 h-[2px] bg-sky-500 hidden sm:block"></span>
-          PRODUCTION
+          {t("productionTabs.title")}
           <span className="w-12 h-[2px] bg-sky-500 hidden sm:block"></span>
         </h2>
       </div>

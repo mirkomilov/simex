@@ -1,0 +1,338 @@
+{
+  "en": {
+    "aboutHero": {
+      "title": "About Us"
+    },
+    "companyInfo": {
+      "titlePrefix": "Who We",
+      "titleHighlight": "Are",
+      "subtitle": "SIMEX PROGRESS – CLOTHING OF THE FUTURE",
+      "paragraph1": "Simex Progress has been supplying high quality products to many major clothing brands since 2008. To date, the company has managed to export more than 25 million products to the CIS countries and Eastern Europe. Services include the supply chain from fabric to finished products.",
+      "paragraph2": "The company's team consists of quality management (TQM) professionals and is constantly improving its processes using methods such as “Kaizen” and “Lean management”.",
+      "exportCountries": "Export countries",
+      "squareMeters": "Square meters",
+      "itemsExport": "Items of export"
+    },
+    "mission": {
+      "titlePrefix": "What",
+      "titleHighlight": "Drives Us",
+      "subtitle": "We combine expertise, innovation, and teamwork to achieve sustainable growth and customer satisfaction.",
+      "features": [
+        {
+          "title": "Our Mission",
+          "description": "Contribute to bring to life the bright works of designers, using our experience, expertise and power. To make fashionable and high-quality clothing affordable."
+        },
+        {
+          "title": "Our Vision",
+          "description": "To be recognized as one of the leading garment manufacturers in Central Asia, trusted globally for quality and reliability."
+        },
+        {
+          "title": "Our Values",
+          "description": "Integrity, quality, teamwork, and continuous improvement are at the heart of everything we do."
+        },
+        {
+          "title": "Our Goals",
+          "description": "To expand our global presence, strengthen partnerships, and deliver value through innovation and speed."
+        }
+      ]
+    },
+    "productionTabs": {
+      "title": "PRODUCTION",
+      "experimental": "EXPERIMENTAL SHOP",
+      "cutting": "CUTTING SHOP",
+      "sewing": "SEWING SHOP",
+      "production": "PRODUCTION"
+    },
+    "workProcess": {
+      "titlePrefix": "How We",
+      "titleHighlight": "Work With Orders",
+      "subtitle": "From first contact to final delivery — each step of our production process is transparent, efficient, and built on quality.",
+      "showMore": "Show More",
+      "showLess": "Show Less",
+      "steps": [
+        {
+          "id": 1,
+          "title": "Price Agreement",
+          "desc": "We calculate the price for each product and confirm terms of cooperation — model, price, and deadlines."
+        },
+        {
+          "id": 2,
+          "title": "Order Confirmation",
+          "desc": "Your order is registered and assigned to a personal manager who ensures smooth communication."
+        },
+        {
+          "id": 3,
+          "title": "Sample Development",
+          "desc": "We create a sample and coordinate it with you. Only after approval, production begins."
+        },
+        {
+          "id": 4,
+          "title": "Material Procurement",
+          "desc": "We purchase fabrics and accessories from trusted suppliers and perform quality checks."
+        },
+        {
+          "id": 5,
+          "title": "Preparation & Production",
+          "desc": "We prepare the production process — cutting, assembling, and managing workflow efficiently."
+        },
+        {
+          "id": 6,
+          "title": "Quality Control",
+          "desc": "Each batch undergoes AQL inspection and verification to eliminate any possible defects."
+        },
+        {
+          "id": 7,
+          "title": "Packaging & Labeling",
+          "desc": "We safely pack products, label them, and prepare all supporting documentation."
+        },
+        {
+          "id": 8,
+          "title": "Shipping",
+          "desc": "We organize delivery and provide full tracking information and logistics documentation."
+        },
+        {
+          "id": 9,
+          "title": "Order Closure",
+          "desc": "We confirm receipt and collect feedback to continuously improve our service."
+        }
+      ]
+    },
+    "map": {
+      "titlePrefix": "EXPORT",
+      "titleHighlight": "GEOGRAPHY",
+      "subtitle": "Our export network covers multiple countries across Europe and Asia.",
+      "russia": "Russia",
+      "tajikistan": "Tajikistan",
+      "kazakhstan": "Kazakhstan",
+      "belarus": "Belarus",
+      "poland": "Poland",
+      "uzbekistan": "Uzbekistan",
+      "germany": "Germany",
+      "lithuania": "Lithuania"
+    }
+  },
+  "uz": {
+    "aboutHero": {
+      "title": "Biz haqimizda"
+    },
+    "companyInfo": {
+      "titlePrefix": "Biz",
+      "titleHighlight": "kimmiz",
+      "subtitle": "SIMEX PROGRESS – KELAJAK KIYIMLARI",
+      "paragraph1": "Simex Progress 2008-yildan buyon ko‘plab yirik kiyim brendlariga yuqori sifatli mahsulotlar yetkazib kelmoqda. Hozirgacha kompaniya MDH mamlakatlari va Sharqiy Yevropaga 25 milliondan ortiq mahsulot eksport qildi. Bizning xizmatlarimiz matodan tayyor kiyimlargacha bo‘lgan to‘liq ishlab chiqarish zanjirini o‘z ichiga oladi.",
+      "paragraph2": "Kompaniya jamoasi TQM sifat menejmenti mutaxassislaridan iborat bo‘lib, “Kaizen” va “Lean management” kabi usullar yordamida jarayonlarni doimiy ravishda takomillashtirib boradi.",
+      "exportCountries": "Eksport mamlakatlari",
+      "squareMeters": "Kvadrat metr",
+      "itemsExport": "Eksport mahsulotlari"
+    },
+    "mission": {
+      "titlePrefix": "Bizni",
+      "titleHighlight": "harakatlantiradigan narsa",
+      "subtitle": "Biz tajriba, innovatsiya va jamoaviy ishlashni birlashtirib, barqaror o‘sish va mijozlar mamnuniyatiga erishamiz.",
+      "features": [
+        {
+          "title": "Bizning missiyamiz",
+          "description": "Dizaynerlarning yorqin g‘oyalarini hayotga tatbiq etish, o‘z tajribamiz, bilimimiz va kuchimizdan foydalanish. Zamonaviy va sifatli kiyimlarni hamma uchun arzon qilish."
+        },
+        {
+          "title": "Bizning qarashimiz",
+          "description": "Markaziy Osiyodagi yetakchi kiyim ishlab chiqaruvchilardan biri sifatida e’tirof etilish, butun dunyoda sifat va ishonchlilik timsoli bo‘lish."
+        },
+        {
+          "title": "Bizning qadriyatlarimiz",
+          "description": "Halollik, sifat, jamoaviylik va doimiy takomillashuv bizning ish faoliyatimizning markazida turadi."
+        },
+        {
+          "title": "Bizning maqsadlarimiz",
+          "description": "Global miqyosda ishtirokni kengaytirish, hamkorlikni mustahkamlash va innovatsiya hamda tezlik orqali qiymat yaratish."
+        }
+      ]
+    },
+    "productionTabs": {
+      "title": "ISHLAB CHIQARISH",
+      "experimental": "TAJRIBAVIY SEX",
+      "cutting": "KESISH SEXI",
+      "sewing": "TIKUV SEXI",
+      "production": "ISHLAB CHIQARISH"
+    },
+    "workProcess": {
+      "titlePrefix": "Buyurtmalar bilan",
+      "titleHighlight": "qanday ishlaymiz",
+      "subtitle": "Dastlabki aloqadan tortib yakuniy yetkazib berishgacha — ishlab chiqarish jarayonimizning har bir bosqichi shaffof, samarali va sifatga asoslangan.",
+      "showMore": "Ko‘proq ko‘rish",
+      "showLess": "Kamroq ko‘rsatish",
+      "steps": [
+        {
+          "id": 1,
+          "title": "Narx kelishuvi",
+          "desc": "Har bir mahsulot uchun narxni hisoblab chiqamiz va hamkorlik shartlarini — model, narx, muddatlarni tasdiqlaymiz."
+        },
+        {
+          "id": 2,
+          "title": "Buyurtmani tasdiqlash",
+          "desc": "Buyurtmangiz ro‘yxatga olinadi va siz bilan doimiy aloqa o‘rnatuvchi shaxsiy menejer biriktiriladi."
+        },
+        {
+          "id": 3,
+          "title": "Namunani tayyorlash",
+          "desc": "Namuna yaratiladi va siz bilan kelishiladi. Faqat tasdiqlangandan so‘ng ishlab chiqarish boshlanadi."
+        },
+        {
+          "id": 4,
+          "title": "Material xaridi",
+          "desc": "Ishonchli yetkazib beruvchilardan mato va aksessuarlar sotib olinadi hamda sifat nazorati o‘tkaziladi."
+        },
+        {
+          "id": 5,
+          "title": "Tayyorlov va ishlab chiqarish",
+          "desc": "Ishlab chiqarish jarayoni tayyorlanadi — kesish, yig‘ish va jarayonni samarali boshqarish."
+        },
+        {
+          "id": 6,
+          "title": "Sifat nazorati",
+          "desc": "Har bir partiya AQL tekshiruvidan o‘tkazilib, kamchiliklar bartaraf etiladi."
+        },
+        {
+          "id": 7,
+          "title": "Qadoqlash va yorliqlash",
+          "desc": "Mahsulotlar xavfsiz tarzda qadoqlanadi, yorliqlanadi va barcha hujjatlar tayyorlanadi."
+        },
+        {
+          "id": 8,
+          "title": "Yetkazib berish",
+          "desc": "Yetkazib berish tashkil etiladi va to‘liq kuzatuv ma’lumotlari taqdim etiladi."
+        },
+        {
+          "id": 9,
+          "title": "Buyurtmani yopish",
+          "desc": "Qabul tasdiqlanadi va xizmatni yanada yaxshilash uchun fikr-mulohaza yig‘iladi."
+        }
+      ]
+    },
+    "map": {
+      "titlePrefix": "EKSPORT",
+      "titleHighlight": "GEOGRAFIYASI",
+      "subtitle": "Bizning eksport tarmog‘imiz Yevropa va Osiyoning bir nechta mamlakatlarini qamrab oladi.",
+      "russia": "Rossiya",
+      "tajikistan": "Tojikiston",
+      "kazakhstan": "Qozog‘iston",
+      "belarus": "Belarus",
+      "poland": "Polsha",
+      "uzbekistan": "O‘zbekiston",
+      "germany": "Germaniya",
+      "lithuania": "Litva"
+    }
+  },
+  "ru": {
+    "aboutHero": {
+      "title": "О нас"
+    },
+    "companyInfo": {
+      "titlePrefix": "Кто мы",
+      "titleHighlight": "есть",
+      "subtitle": "SIMEX PROGRESS – ОДЕЖДА БУДУЩЕГО",
+      "paragraph1": "Simex Progress с 2008 года поставляет высококачественную продукцию многим крупным брендам одежды. На сегодняшний день компания экспортировала более 25 миллионов изделий в страны СНГ и Восточной Европы. Услуги включают полный производственный цикл от ткани до готовой продукции.",
+      "paragraph2": "Команда компании состоит из специалистов по управлению качеством (TQM) и постоянно совершенствует процессы, используя методы «Kaizen» и «Бережливое производство».",
+      "exportCountries": "Страны экспорта",
+      "squareMeters": "Квадратные метры",
+      "itemsExport": "Экспортируемые изделия"
+    },
+    "mission": {
+      "titlePrefix": "Что",
+      "titleHighlight": "движет нами",
+      "subtitle": "Мы объединяем опыт, инновации и командную работу для устойчивого роста и удовлетворения клиентов.",
+      "features": [
+        {
+          "title": "Наша миссия",
+          "description": "Воплощать идеи дизайнеров в жизнь, используя наш опыт, знания и возможности. Сделать модную и качественную одежду доступной для всех."
+        },
+        {
+          "title": "Наше видение",
+          "description": "Быть признанными одним из ведущих производителей одежды в Центральной Азии, заслуживающим доверие по всему миру за качество и надежность."
+        },
+        {
+          "title": "Наши ценности",
+          "description": "Честность, качество, командная работа и постоянное совершенствование лежат в основе всего, что мы делаем."
+        },
+        {
+          "title": "Наши цели",
+          "description": "Расширять глобальное присутствие, укреплять партнерство и создавать ценность через инновации и скорость."
+        }
+      ]
+    },
+    "productionTabs": {
+      "title": "ПРОИЗВОДСТВО",
+      "experimental": "ЭКСПЕРИМЕНТАЛЬНЫЙ ЦЕХ",
+      "cutting": "РАСКРОЙНЫЙ ЦЕХ",
+      "sewing": "ШВЕЙНЫЙ ЦЕХ",
+      "production": "ПРОИЗВОДСТВО"
+    },
+    "workProcess": {
+      "titlePrefix": "Как мы",
+      "titleHighlight": "работаем с заказами",
+      "subtitle": "От первого контакта до финальной доставки — каждый этап нашего производственного процесса прозрачен, эффективен и основан на качестве.",
+      "showMore": "Показать больше",
+      "showLess": "Показать меньше",
+      "steps": [
+        {
+          "id": 1,
+          "title": "Согласование цены",
+          "desc": "Мы рассчитываем стоимость каждого изделия и утверждаем условия сотрудничества — модель, цену и сроки."
+        },
+        {
+          "id": 2,
+          "title": "Подтверждение заказа",
+          "desc": "Ваш заказ регистрируется и закрепляется за личным менеджером, который обеспечивает бесперебойную коммуникацию."
+        },
+        {
+          "id": 3,
+          "title": "Разработка образца",
+          "desc": "Мы создаем образец и согласовываем его с вами. Производство начинается только после утверждения."
+        },
+        {
+          "id": 4,
+          "title": "Закупка материалов",
+          "desc": "Мы закупаем ткани и аксессуары у проверенных поставщиков и проводим контроль качества."
+        },
+        {
+          "id": 5,
+          "title": "Подготовка и производство",
+          "desc": "Мы подготавливаем процесс — раскрой, сборку и эффективное управление производством."
+        },
+        {
+          "id": 6,
+          "title": "Контроль качества",
+          "desc": "Каждая партия проходит инспекцию AQL и проверку для устранения дефектов."
+        },
+        {
+          "id": 7,
+          "title": "Упаковка и маркировка",
+          "desc": "Мы аккуратно упаковываем продукцию, наносим этикетки и готовим всю документацию."
+        },
+        {
+          "id": 8,
+          "title": "Доставка",
+          "desc": "Мы организуем транспортировку и предоставляем полную информацию для отслеживания."
+        },
+        {
+          "id": 9,
+          "title": "Закрытие заказа",
+          "desc": "Мы подтверждаем получение и собираем отзывы для постоянного улучшения сервиса."
+        }
+      ]
+    },
+    "map": {
+      "titlePrefix": "ЭКСПОРТНАЯ",
+      "titleHighlight": "ГЕОГРАФИЯ",
+      "subtitle": "Наша экспортная сеть охватывает множество стран Европы и Азии.",
+      "russia": "Россия",
+      "tajikistan": "Таджикистан",
+      "kazakhstan": "Казахстан",
+      "belarus": "Беларусь",
+      "poland": "Польша",
+      "uzbekistan": "Узбекистан",
+      "germany": "Германия",
+      "lithuania": "Литва"
+    }
+  }
+}
