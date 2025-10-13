@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import heroBg from "../../assets/products-images/bg-fabric.jpg";
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -12,7 +13,7 @@ export default function ProductHero() {
       <section
         className="relative w-full h-[55vh] flex flex-col justify-start items-start text-left overflow-hidden"
         style={{
-          backgroundImage: "url('/src/assets/products-images/bg-fabric.jpg')",
+          backgroundImage: `url(${heroBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
