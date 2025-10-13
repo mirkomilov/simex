@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import exp1 from "../../assets/production-imgs/cut1.webp";
 import exp2 from "../../assets/production-imgs/cut2.jpg";
@@ -9,9 +9,9 @@ import cut3 from "../../assets/production-imgs/sew1.jpg";
 import sew1 from "../../assets/production-imgs/s1.jpg";
 import sew2 from "../../assets/production-imgs/s2.jpg";
 import sew3 from "../../assets/production-imgs/s3.jpg";
-import prod1 from "../../assets/production-imgs/cut2.jpg";
-import prod2 from "../../assets/production-imgs/cut2.jpg";
-import prod3 from "../../assets/production-imgs/cut2.jpg";
+import prod1 from "../../assets/production-imgs/p1.jpg";
+import prod2 from "../../assets/production-imgs/p2.webp";
+import prod3 from "../../assets/production-imgs/p3.webp";
 import { div, section } from "framer-motion/client";
 
 const tabs = [
@@ -40,8 +40,25 @@ const tabs = [
 const ProductionTabs = () => {
   const [activeTab, setActiveTab] = useState("experimental");
 
+  useEffect(() => {
+    if (window.location.hash === "#production-tabs") {
+      const element = document.getElementById("production-tabs");
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 300);
+      }
+    }
+  }, []);
+
   return (
-    <section className="bg-gray-50 py-20 px-6 md:px-12 lg:px-24">
+    <motion.section
+      id="production"
+      className="bg-gray-50 min-h-screen flex flex-col justify-center py-20 px-6 md:px-12 lg:px-24 scroll-mt-24"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
       {/* Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 flex items-center justify-center gap-4">
@@ -68,7 +85,8 @@ const ProductionTabs = () => {
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute left-0 right-0 -bottom-1 h-[3px] bg-sky-500 rounded-full"
+                  className="absolute left-0 right-0 -bottom-1 h-[3px] bg-gradient-to-r from-sky-500 to-sky-600 rounded-full"
+                  transition={{ type: "spring", stiffness: 250, damping: 20 }}
                 />
               )}
             </button>
@@ -90,13 +108,14 @@ const ProductionTabs = () => {
                 <img
                   src={img}
                   alt={`${activeTab}-${i}`}
-                  className="rounded-xl shadow-md border border-gray-200 object-cover w-full h-[300px] md:h-[340px] hover:scale-[1.03] hover:shadow-xl transition-all duration-500"
+                  loading="lazy"
+                  className="rounded-xl shadow-md border border-gray-200 object-cover w-full h-[300px] md:h-[340px] hover:scale-[1.04] hover:shadow-2xl hover:shadow-sky-200/60 transition-all duration-500 ease-out"
                 />
               </motion.div>
             ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

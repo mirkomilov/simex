@@ -11,7 +11,7 @@ export default function HeroSection() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.25 },
+      transition: { staggerChildren: 0.1, delayChildren: 0.15 },
     },
   };
 
@@ -21,8 +21,8 @@ export default function HeroSection() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        ease: [0.42, 0, 0.58, 1],
+        duration: 0.4,
+        ease: [0.25, 0.1, 0.25, 1],
       },
     },
   };
@@ -37,12 +37,12 @@ export default function HeroSection() {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 max-w-4xl px-6 md:px-16"
+        className="relative z-10 max-w-3xl md:max-w-4xl lg:max-w-5xl px-6 md:px-16"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-        transition={{ duration: 0.6, ease: "easeInOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.45, ease: "easeInOut" }}
       >
         <motion.p
           className="text-sky-500 tracking-widest uppercase text-base md:text-lg mb-4 font-semibold"

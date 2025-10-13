@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { useNavigate } from "react-router-dom";
+
 import woman1 from "../../assets/home-images/woman1.jpg";
 import woman2 from "../../assets/home-images/woman2.jpg";
 import woman3 from "../../assets/home-images/woman3.jpg";
@@ -48,6 +50,8 @@ function Production() {
         .map((i) => i.image),
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <section className="bg-gray-50 py-16 px-6 md:px-12 lg:px-24 text-center mb-0 overflow-hidden">
@@ -147,12 +151,20 @@ function Production() {
                 <h3 className="font-semibold text-base md:text-lg text-gray-800 mb-1">
                   {group.title}
                 </h3>
-                <a
-                  href="#"
+                <button
+                  onClick={() => {
+                    if (group.title === "Women's clothing") {
+                      navigate("/products#woman");
+                    } else if (group.title === "Men's clothing") {
+                      navigate("/products#man");
+                    } else if (group.title === "Children's clothing") {
+                      navigate("/products#child");
+                    }
+                  }}
                   className="text-sky-500 hover:text-sky-600 font-normal text-sm transition"
                 >
                   More →
-                </a>
+                </button>
               </div>
             </SwiperSlide>
           ))}

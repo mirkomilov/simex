@@ -1,5 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import qualityImg from "../../assets/home-images/quality.jpg";
 
 const Counter = ({ from = 0, to, duration = 2000 }) => {
@@ -18,6 +19,10 @@ const Counter = ({ from = 0, to, duration = 2000 }) => {
   }, []);
 
   useEffect(() => {
+    if (window.innerWidth < 768) {
+      setCount(to); // Immediately show final count on mobile
+      return;
+    }
     if (!inView) return;
     let start = null;
     const step = (timestamp) => {
@@ -33,17 +38,17 @@ const Counter = ({ from = 0, to, duration = 2000 }) => {
 };
 
 export default function QualitySection() {
+  const navigate = useNavigate();
   return (
     <motion.section
       id="quality"
-      className="bg-gray-50 py-16 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-12 overflow-hidden"
+      className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-12"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}
     >
       {/* Text Content */}
       <motion.div
-        layout
         className="lg:w-1/2 text-center lg:text-left order-2 lg:order-1"
         variants={{
           hidden: { opacity: 0, x: -80 },
@@ -64,12 +69,23 @@ export default function QualitySection() {
           We are committed to maintaining the highest standards in every aspect
           of our production process to ensure the best results for our clients.
         </p>
-        <a
-          href="#"
+        <button
+          onClick={() => {
+            navigate("/about#production");
+            setTimeout(() => {
+              const section = document.getElementById("production");
+              if (section) {
+                window.scrollTo({
+                  top: section.offsetTop - 70,
+                  behavior: "smooth",
+                });
+              }
+            }, 300);
+          }}
           className="inline-block bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-sky-600 hover:to-sky-700 transition-all duration-300 text-base md:text-lg"
         >
           More →
-        </a>
+        </button>
 
         {/* Counters */}
         <div className="flex justify-center lg:justify-start gap-12 mt-8">
@@ -96,7 +112,6 @@ export default function QualitySection() {
 
       {/* Image */}
       <motion.img
-        layout
         src={qualityImg}
         alt="Quality"
         className="w-full lg:w-1/2 shadow-xl hover:shadow-2xl transition-shadow duration-500 object-cover order-1 lg:order-2 border border-gray-200 rounded-md"
