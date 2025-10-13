@@ -1,0 +1,132 @@
+{
+  "en": {
+    "contactHero": {
+      "title": "Contact Us"
+    },
+    "contactInfo": {
+      "items": [
+        {
+          "title": "PHONE NUMBER",
+          "icon": "phone",
+          "lines": ["+99890 955 55 70", "+99871 231 98 03", "+99871 231 98 04"]
+        },
+        {
+          "title": "ADDRESS",
+          "icon": "address",
+          "lines": [
+            "Tashkent city, Sergeli district,",
+            "st. Kumaryk-3, building 88"
+          ]
+        },
+        {
+          "title": "EMAIL",
+          "icon": "email",
+          "lines": ["info@simex.uz"]
+        }
+      ]
+    },
+    "contactFormSection": {
+      "subtitle": "Contact us",
+      "title": "Let’s start today!",
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Your name",
+        "email": "Your email",
+        "phone": "Your phone number",
+        "message": "Write your message..."
+      },
+      "button": "Send"
+    }
+    
+  },
+  "uz": {
+    "contactHero": {
+      "title": "Biz bilan bog‘laning"
+    },
+    "contactInfo": {
+      "items": [
+        {
+          "title": "TELEFON RAQAMLAR",
+          "icon": "phone",
+          "lines": ["+99890 955 55 70", "+99871 231 98 03", "+99871 231 98 04"]
+        },
+        {
+          "title": "MANZIL",
+          "icon": "address",
+          "lines": [
+            "Toshkent shahri, Sergeli tumani,",
+            "Kumaryk-3 ko‘chasi, 88-bino"
+          ]
+        },
+        {
+          "title": "EMAIL",
+          "icon": "email",
+          "lines": ["info@simex.uz"]
+        }
+      ]
+    },
+     "contactFormSection": {
+      "subtitle": "Biz bilan bog‘laning",
+      "title": "Keling, bugun boshlaylik!",
+      "fields": {
+        "name": "Ism",
+        "email": "Email",
+        "phone": "Telefon raqam",
+        "message": "Xabar"
+      },
+      "placeholders": {
+        "name": "Ismingizni kiriting",
+        "email": "Email manzilingiz",
+        "phone": "Telefon raqamingiz",
+        "message": "Xabaringizni yozing..."
+      },
+      "button": "Yuborish"
+    }
+  },
+  "ru": {
+    "contactHero": {
+      "title": "Свяжитесь с нами"
+    },
+    "contactInfo": {
+      "items": [
+        {
+          "title": "ТЕЛЕФОН",
+          "icon": "phone",
+          "lines": ["+99890 955 55 70", "+99871 231 98 03", "+99871 231 98 04"]
+        },
+        {
+          "title": "АДРЕС",
+          "icon": "address",
+          "lines": ["г. Ташкент, Сергелийский район,", "ул. Кумарык-3, дом 88"]
+        },
+        {
+          "title": "ЭЛ. ПОЧТА",
+          "icon": "email",
+          "lines": ["info@simex.uz"]
+        }
+      ]
+    },
+    "contactFormSection": {
+      "subtitle": "Свяжитесь с нами",
+      "title": "Начнем сегодня!",
+      "fields": {
+        "name": "Имя",
+        "email": "Эл. почта",
+        "phone": "Телефон",
+        "message": "Сообщение"
+      },
+      "placeholders": {
+        "name": "Введите ваше имя",
+        "email": "Введите вашу почту",
+        "phone": "Ваш номер телефона",
+        "message": "Напишите сообщение..."
+      },
+      "button": "Отправить"
+    }
+  }
+}

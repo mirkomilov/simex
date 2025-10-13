@@ -1,6 +1,6 @@
-// src/components/WorkProcessSection.jsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next"; // ✅ qo‘shildi
 import {
   DollarSign,
   ClipboardList,
@@ -15,65 +15,13 @@ import {
   ChevronUp,
 } from "lucide-react";
 
-const steps = [
-  {
-    id: 1,
-    icon: <DollarSign className="w-6 h-6" />,
-    title: "Price Agreement",
-    desc: "We calculate the price for each product and confirm terms of cooperation — model, price, and deadlines.",
-  },
-  {
-    id: 2,
-    icon: <ClipboardList className="w-6 h-6" />,
-    title: "Order Confirmation",
-    desc: "Your order is registered and assigned to a personal manager who ensures smooth communication.",
-  },
-  {
-    id: 3,
-    icon: <Scissors className="w-6 h-6" />,
-    title: "Sample Development",
-    desc: "We create a sample and coordinate it with you. Only after approval, production begins.",
-  },
-  {
-    id: 4,
-    icon: <ShoppingBag className="w-6 h-6" />,
-    title: "Material Procurement",
-    desc: "We purchase fabrics and accessories from trusted suppliers and perform quality checks.",
-  },
-  {
-    id: 5,
-    icon: <Factory className="w-6 h-6" />,
-    title: "Preparation & Production",
-    desc: "We prepare the production process — cutting, assembling, and managing workflow efficiently.",
-  },
-  {
-    id: 6,
-    icon: <SearchCheck className="w-6 h-6" />,
-    title: "Quality Control",
-    desc: "Each batch undergoes AQL inspection and verification to eliminate any possible defects.",
-  },
-  {
-    id: 7,
-    icon: <Package className="w-6 h-6" />,
-    title: "Packaging & Labeling",
-    desc: "We safely pack products, label them, and prepare all supporting documentation.",
-  },
-  {
-    id: 8,
-    icon: <Truck className="w-6 h-6" />,
-    title: "Shipping",
-    desc: "We organize delivery and provide full tracking information and logistics documentation.",
-  },
-  {
-    id: 9,
-    icon: <CheckCircle className="w-6 h-6" />,
-    title: "Order Closure",
-    desc: "We confirm receipt and collect feedback to continuously improve our service.",
-  },
-];
-
 const WorkProcessSection = () => {
+  const { t } = useTranslation(); // ✅ i18next qo‘shildi
   const [showAll, setShowAll] = useState(false);
+
+  // Tarjima orqali bosqichlar massivini olish
+  const steps = t("workProcess.steps", { returnObjects: true });
+
   const visibleSteps = showAll ? steps : steps.slice(0, 2);
 
   return (
@@ -81,44 +29,54 @@ const WorkProcessSection = () => {
       {/* Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
-          How We{" "}
+          {t("workProcess.titlePrefix")}{" "}
           <span className="bg-gradient-to-r from-sky-500 to-sky-700 bg-clip-text text-transparent">
-            Work With Orders
+            {t("workProcess.titleHighlight")}
           </span>
         </h2>
         <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
-          From first contact to final delivery — each step of our production
-          process is transparent, efficient, and built on quality.
+          {t("workProcess.subtitle")}
         </p>
       </div>
 
       <div className="max-w-5xl mx-auto space-y-6">
         <AnimatePresence>
-          {visibleSteps.map(({ id, icon, title, desc }) => (
-            <motion.div
-              key={id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.4 }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              {/* Icon */}
-              <div className="flex items-center justify-center w-12 h-12 bg-sky-500 text-white rounded-full shadow-md flex-shrink-0">
-                {icon}
-              </div>
+          {visibleSteps.map(({ id, title, desc, icon }) => {
+            const icons = {
+              1: <DollarSign className="w-6 h-6" />,
+              2: <ClipboardList className="w-6 h-6" />,
+              3: <Scissors className="w-6 h-6" />,
+              4: <ShoppingBag className="w-6 h-6" />,
+              5: <Factory className="w-6 h-6" />,
+              6: <SearchCheck className="w-6 h-6" />,
+              7: <Package className="w-6 h-6" />,
+              8: <Truck className="w-6 h-6" />,
+              9: <CheckCircle className="w-6 h-6" />,
+            };
 
-              {/* Text */}
-              <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">
-                  {id}. {title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  {desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+            return (
+              <motion.div
+                key={id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.4 }}
+                className="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
+                <div className="flex items-center justify-center w-12 h-12 bg-sky-500 text-white rounded-full shadow-md flex-shrink-0">
+                  {icons[id]}
+                </div>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-1">
+                    {id}. {title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                    {desc}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
         </AnimatePresence>
 
         {/* Toggle Button */}
@@ -129,11 +87,11 @@ const WorkProcessSection = () => {
           >
             {showAll ? (
               <>
-                Show Less <ChevronUp className="w-5 h-5" />
+                {t("workProcess.showLess")} <ChevronUp className="w-5 h-5" />
               </>
             ) : (
               <>
-                Show More <ChevronDown className="w-5 h-5" />
+                {t("workProcess.showMore")} <ChevronDown className="w-5 h-5" />
               </>
             )}
           </button>

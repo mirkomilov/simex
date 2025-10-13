@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"; // ✅ tarjima qo‘shildi
 import contactImg from "../../assets/home-images/contact.jpg";
 
 function Contact() {
+  const { t } = useTranslation(); // ✅ i18n hook
+
   return (
     <section className="min-h-[90vh] flex flex-col justify-center bg-[#f9fafb] py-16 md:py-24 px-6 sm:px-12 lg:px-20 xl:px-28">
       <div className="max-w-6xl mx-auto text-center mb-8">
         <p className="uppercase text-sky-500 tracking-widest font-semibold mb-4">
-          Contact Us
+          {t("contact.subtitle")}
         </p>
         <h2 className="text-4xl md:text-5xl font-extrabold leading-snug mb-6 text-gray-900">
-          Let’s start{" "}
+          {t("contact.titlePrefix")}{" "}
           <motion.span
             className="bg-gradient-to-r from-sky-400 to-sky-600 bg-clip-text text-transparent"
             animate={{
@@ -21,16 +24,16 @@ function Contact() {
               ease: "easeInOut",
             }}
           >
-            today!
+            {t("contact.titleHighlight")}
           </motion.span>
         </h2>
         <p className="text-gray-500 text-base leading-relaxed mx-auto max-w-md">
-          Have any questions, ideas, or collaboration proposals? Fill out the
-          form and we’ll get back to you shortly.
+          {t("contact.description")}
         </p>
       </div>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center justify-center gap-10 lg:gap-16">
+        {/* Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -44,6 +47,7 @@ function Contact() {
           />
         </motion.div>
 
+        {/* Form */}
         <motion.form
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -53,21 +57,21 @@ function Contact() {
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="block text-gray-700 text-sm font-medium mb-2">
-                Name
+                {t("contact.nameLabel")}
               </label>
               <input
                 type="text"
-                placeholder="Enter your name"
+                placeholder={t("contact.namePlaceholder")}
                 className="w-full p-2.5 text-[13px] rounded-xl shadow-sm border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 bg-white text-gray-900 placeholder-gray-400 transition hover:border-sky-400"
               />
             </div>
             <div>
               <label className="block text-gray-700 text-sm font-medium mb-2">
-                Email
+                {t("contact.emailLabel")}
               </label>
               <input
                 type="email"
-                placeholder="you@example.com"
+                placeholder={t("contact.emailPlaceholder")}
                 className="w-full p-2.5 text-[13px] rounded-xl shadow-sm border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 bg-white text-gray-900 placeholder-gray-400 transition hover:border-sky-400"
               />
             </div>
@@ -76,21 +80,21 @@ function Contact() {
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="block text-gray-700 text-sm font-medium mb-2">
-                Phone
+                {t("contact.phoneLabel")}
               </label>
               <input
                 type="text"
-                placeholder="Phone number"
+                placeholder={t("contact.phonePlaceholder")}
                 className="w-full p-2.5 text-[13px] rounded-xl shadow-sm border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 bg-white text-gray-900 placeholder-gray-400 transition hover:border-sky-400"
               />
             </div>
             <div>
               <label className="block text-gray-700 text-sm font-medium mb-2">
-                Company (optional)
+                {t("contact.companyLabel")}
               </label>
               <input
                 type="text"
-                placeholder="Your company"
+                placeholder={t("contact.companyPlaceholder")}
                 className="w-full p-2.5 text-[13px] rounded-xl shadow-sm border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 bg-white text-gray-900 placeholder-gray-400 transition hover:border-sky-400"
               />
             </div>
@@ -98,11 +102,11 @@ function Contact() {
 
           <div>
             <label className="block text-gray-700 text-sm font-medium mb-2">
-              Message
+              {t("contact.messageLabel")}
             </label>
             <textarea
               rows="4"
-              placeholder="Write your message..."
+              placeholder={t("contact.messagePlaceholder")}
               className="w-full p-2.5 text-[13px] rounded-xl shadow-sm border border-gray-200 focus:ring-2 focus:ring-blue-300 focus:border-blue-500 bg-white text-gray-900 placeholder-gray-400 transition resize-none hover:border-sky-400"
             ></textarea>
           </div>
@@ -111,7 +115,7 @@ function Contact() {
             type="submit"
             className="w-full rounded-full bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold py-3 text-lg shadow-lg hover:shadow-sky-300 hover:scale-105 hover:translate-y-[-2px] active:translate-y-[0px] transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-sky-300"
           >
-            Send Message
+            {t("contact.sendButton")}
           </button>
         </motion.form>
       </div>

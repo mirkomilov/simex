@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"; // ✅ tarjima qo‘shildi
 
 import acoola from "../../assets/home-images/acoola.png";
 import conceptclub from "../../assets/home-images/conceptclub.png";
@@ -22,6 +23,8 @@ const logos = [
 ];
 
 function Partners() {
+  const { t } = useTranslation(); // ✅ i18n chaqirildi
+
   return (
     <section className="bg-gray-50 py-16 px-6 md:px-16 lg:px-32 flex flex-col items-center">
       <motion.h2
@@ -31,9 +34,9 @@ function Partners() {
         viewport={{ once: false, amount: 0.3 }}
         className="text-4xl font-extrabold text-gray-900 mb-12 text-center"
       >
-        Our{" "}
+        {t("partners.titlePrefix")}{" "}
         <span className="bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 bg-clip-text text-transparent">
-          Partners
+          {t("partners.titleHighlight")}
         </span>
       </motion.h2>
 

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"; // ✅ i18next qo‘shildi
 import heroBg from "../../assets/products-images/bg-fabric.jpg";
 
 const itemVariants = {
@@ -7,6 +8,8 @@ const itemVariants = {
 };
 
 export default function ProductHero() {
+  const { t } = useTranslation(); // ✅ tarjima chaqirildi
+
   return (
     <>
       {/* Hero background */}
@@ -35,7 +38,7 @@ export default function ProductHero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-6xl md:text-8xl font-extrabold text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.45)] tracking-tight"
           >
-            Product
+            {t("productHero.title")}
           </motion.h1>
         </div>
       </section>
@@ -43,10 +46,7 @@ export default function ProductHero() {
       {/* Description below the hero */}
       <section className="bg-gradient-to-b from-gray-50 to-gray-100 text-center py-16 px-6 md:px-24">
         <p className="text-gray-600 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed transition-all duration-700 hover:text-sky-600">
-          Simex Progress offers tailoring of ready-made knitwear. The range
-          includes men’s, women’s and children’s products. Simex Progress uses
-          the following fabrics in the production of clothing: single jersey,
-          footer, ribana, interlock, pique, velour, etc.
+          {t("productHero.description")}
         </p>
       </section>
     </>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next"; // ✅ translate uchun
 import heroBg from "../../assets/Contact.webp";
 
 const itemVariants = {
@@ -6,7 +7,9 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-export default function AboutHero() {
+export default function ContactHero() {
+  const { t } = useTranslation(); // ✅ tarjima funksiyasi
+
   return (
     <>
       {/* Hero background */}
@@ -35,7 +38,7 @@ export default function AboutHero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-6xl md:text-8xl font-extrabold text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.45)] tracking-tight"
           >
-            Contact Us
+            {t("contactHero.title")}
           </motion.h1>
         </div>
       </section>
