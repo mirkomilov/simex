@@ -128,7 +128,7 @@ function Footer() {
                 <img
                   src={icon.src}
                   alt={icon.alt}
-                  className="w-7 h-7 opacity-80 transition-all duration-300 ease-in-out hover:scale-110 hover:opacity-100 hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.7)]"
+                  className="w-7 h-7 opacity-90 filter invert brightness-200 transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-125 hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
                 />
               </a>
             ))}
