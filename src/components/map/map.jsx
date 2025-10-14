@@ -7,14 +7,14 @@ export const Map = () => {
   const [hovered, setHovered] = useState(null);
 
   const countries = [
-    { name: t("map.russia"), class: "russian" },
+    { name: t("map.russia"), class: "Russian" },
     { name: t("map.tajikistan"), class: "tajikistan" },
     { name: t("map.kazakhstan"), class: "kazakhstan" },
     { name: t("map.belarus"), class: "belarus" },
     { name: t("map.poland"), class: "poland" },
     { name: t("map.uzbekistan"), class: "uzbekistan" },
     { name: t("map.germany"), class: "germany" },
-    { name: t("map.lithuania"), class: "lithuania" },
+    { name: t("map.lithuania"), class: "Lithuania" },
   ];
 
   return (
