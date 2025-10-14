@@ -126,7 +126,7 @@ function Contact() {
               {t("contact.phoneLabel")}
             </label>
             <input
-              type="text"
+              type="number"
               name="phone"
               placeholder={t("contact.phonePlaceholder")}
               className="w-full p-2.5 text-[13px] rounded-xl shadow-sm border border-gray-200 focus:ring-2 focus:ring-sky-300 focus:border-sky-500 bg-white text-gray-900 placeholder-gray-400 transition hover:border-sky-400"
