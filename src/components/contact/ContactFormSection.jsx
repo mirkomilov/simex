@@ -91,7 +91,7 @@ const ContactFormSection = () => {
                 {t("contactFormSection.fields.phone")}
               </label>
               <input
-                type="text"
+                type="number"
                 id="phone"
                 name="phone"
                 placeholder={t("contactFormSection.placeholders.phone")}

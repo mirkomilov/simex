@@ -8,8 +8,8 @@ const AlertMessage = ({ type, message, onClose }) => {
 
   // 🌿 Och-yashil (light green) gradient — senga mos
   const bgColor = isSuccess
-    ? "bg-gradient-to-r from-green-300 via-green-400 to-green-500"
-    : "bg-gradient-to-r from-red-400 via-red-500 to-red-600";
+    ? "bg-gradient-to-r from-green-100 via-green-200 to-green-100"
+    : "bg-gradient-to-r from-red-100 via-red-200 to-red-100";
 
   return (
     <AnimatePresence>
@@ -20,11 +20,12 @@ const AlertMessage = ({ type, message, onClose }) => {
         transition={{ duration: 0.35, ease: "easeOut" }}
         className={`fixed top-8 left-1/2 transform -translate-x-1/2 z-[9999] ${bgColor} text-gray-900 font-medium px-8 py-4 rounded-2xl shadow-xl border border-white/30 backdrop-blur-sm flex items-center gap-3`}
       >
+        <p className={`tracking-wide text-[15px] ${isSuccess ? "text-green-600" : "text-red-600"}`}>{message}</p>
         {/* ICON */}
         {isSuccess ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 text-green-900"
+            className="w-6 h-6 text-green-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -35,7 +36,7 @@ const AlertMessage = ({ type, message, onClose }) => {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 text-red-900"
+            className="w-6 h-6 text-red-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -48,17 +49,7 @@ const AlertMessage = ({ type, message, onClose }) => {
             />
           </svg>
         )}
-
-        {/* TEXT */}
-        <p className="tracking-wide text-[15px]">{message}</p>
-
-        {/* CLOSE BUTTON */}
-        <button
-          onClick={onClose}
-          className="ml-4 text-gray-800/70 hover:text-gray-900 transition text-xl leading-none"
-        >
-          ×
-        </button>
+        
       </motion.div>
     </AnimatePresence>
   );

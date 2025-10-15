@@ -40,7 +40,9 @@
         "phone": "Your phone number",
         "message": "Write your message..."
       },
-      "button": "Send"
+      "button": "Send",
+      "success": "Message sent",
+      "error": "Message not sent."
     }
     
   },
@@ -85,7 +87,9 @@
         "phone": "Telefon raqamingiz",
         "message": "Xabaringizni yozing..."
       },
-      "button": "Yuborish"
+      "button": "Yuborish",
+      "success": "Xabar yuborildi",
+      "error": "Xabar yuborilmadi"
     }
   },
   "ru": {
@@ -126,7 +130,9 @@
         "phone": "Ваш номер телефона",
         "message": "Напишите сообщение..."
       },
-      "button": "Отправить"
+      "button": "Отправить",
+      "success": "Сообщение отправлено",
+      "error": "Сообщение не отправлено."
     }
   }
 }
