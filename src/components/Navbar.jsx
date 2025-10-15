@@ -10,14 +10,14 @@ export default function Navbar() {
   const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
 
+  // Auto scroll to top when page changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
 
+  // Shadow when scrolled
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 0);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,7 +27,7 @@ export default function Navbar() {
   const normalStyle =
     "text-gray-700 hover:text-[#0ea5e9] transition-all duration-300";
 
-  // 🌍 Tilni o‘zgartirish
+  // Language Switcher
   const changeLanguage = (e) => {
     const selectedLang = e.target.value;
     i18n.changeLanguage(selectedLang);
@@ -38,9 +38,9 @@ export default function Navbar() {
       className={`flex items-center justify-between px-8 py-4 bg-white sticky top-0 z-50 ${
         scrolled ? "backdrop-blur-sm shadow-md" : ""
       }`}
-      initial={{ y: -100 }}
+      initial={{ y: -80 }}
       animate={{ y: 0 }}
-      transition={{ type: "spring", stiffness: 75, damping: 20 }}
+      transition={{ type: "spring", stiffness: 75, damping: 18 }}
     >
       {/* LOGO */}
       <div className="text-2xl font-extrabold tracking-wide text-[#0ea5e9] hover:text-[#0284c7] transition-all duration-300 cursor-pointer">
@@ -52,59 +52,25 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* LINKS */}
+      {/* DESKTOP LINKS */}
       <div className="hidden md:flex gap-10 text-[17px]">
-        <NavLink
-          to="/home"
-          onClick={() => {
-            if (pathname === "/home") {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
-            setMenuOpen(false);
-          }}
-          className={({ isActive }) => (isActive ? activeStyle : normalStyle)}
-        >
-          {t("home")}
-        </NavLink>
-        <NavLink
-          to="/about"
-          onClick={() => {
-            if (pathname === "/about") {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
-            setMenuOpen(false);
-          }}
-          className={({ isActive }) => (isActive ? activeStyle : normalStyle)}
-        >
-          {t("about")}
-        </NavLink>
-        <NavLink
-          to="/products"
-          onClick={() => {
-            if (pathname === "/products") {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
-            setMenuOpen(false);
-          }}
-          className={({ isActive }) => (isActive ? activeStyle : normalStyle)}
-        >
-          {t("products")}
-        </NavLink>
-        <NavLink
-          to="/contacts"
-          onClick={() => {
-            if (pathname === "/contacts") {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }
-            setMenuOpen(false);
-          }}
-          className={({ isActive }) => (isActive ? activeStyle : normalStyle)}
-        >
-          {t("contacts")}
-        </NavLink>
+        {["home", "about", "products", "contacts"].map((link) => (
+          <NavLink
+            key={link}
+            to={`/${link}`}
+            onClick={() => {
+              if (pathname === `/${link}`)
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              setMenuOpen(false);
+            }}
+            className={({ isActive }) => (isActive ? activeStyle : normalStyle)}
+          >
+            {t(link)}
+          </NavLink>
+        ))}
       </div>
 
-      {/* 🌐 LANGUAGE SELECT (DESKTOP) */}
+      {/* LANGUAGE SELECT (DESKTOP) */}
       <div className="hidden md:block">
         <select
           onChange={changeLanguage}
@@ -119,8 +85,9 @@ export default function Navbar() {
 
       {/* MOBILE MENU BUTTON */}
       <button
-        className="md:hidden text-3xl text-[#0ea5e9] focus:outline-none"
+        className="md:hidden text-3xl text-[#0ea5e9] focus:outline-none transition-transform duration-300"
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
       >
         {menuOpen ? <HiX /> : <HiMenuAlt3 />}
       </button>
@@ -129,88 +96,67 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="absolute top-0 left-0 w-full bg-white z-[999] flex flex-col items-center gap-6 py-8 shadow-md md:hidden rounded-b-2xl border-t border-gray-100"
+            key="menuWrapper"
+            className="fixed inset-0 z-[998] flex items-start justify-center md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            onClick={() => setMenuOpen(false)}
           >
-            <button
-              className="absolute top-4 right-6 text-2xl text-[#0ea5e9] hover:text-[#0284c7] transition-all duration-200"
-              onClick={() => setMenuOpen(false)}
-            >
-              ✕
-            </button>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
 
-            <NavLink
-              to="/home"
-              onClick={() => {
-                if (pathname === "/home") {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-                setMenuOpen(false);
-              }}
-              className={({ isActive }) =>
-                isActive ? activeStyle : normalStyle
-              }
+            {/* Menu Panel */}
+            <motion.div
+              key="menuPanel"
+              initial={{ opacity: 0, y: -20, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -15, scale: 0.98 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="relative mt-10 w-[90%] max-w-sm bg-white z-[999] flex flex-col items-center gap-6 py-8 shadow-xl rounded-2xl border border-gray-100"
+              onClick={(e) => e.stopPropagation()}
             >
-              {t("home")}
-            </NavLink>
-            <NavLink
-              to="/about"
-              onClick={() => {
-                if (pathname === "/about") {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-                setMenuOpen(false);
-              }}
-              className={({ isActive }) =>
-                isActive ? activeStyle : normalStyle
-              }
-            >
-              {t("about")}
-            </NavLink>
-            <NavLink
-              to="/products"
-              onClick={() => {
-                if (pathname === "/products") {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-                setMenuOpen(false);
-              }}
-              className={({ isActive }) =>
-                isActive ? activeStyle : normalStyle
-              }
-            >
-              {t("products")}
-            </NavLink>
-            <NavLink
-              to="/contacts"
-              onClick={() => {
-                if (pathname === "/contacts") {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-                setMenuOpen(false);
-              }}
-              className={({ isActive }) =>
-                isActive ? activeStyle : normalStyle
-              }
-            >
-              {t("contacts")}
-            </NavLink>
+              {/* Close Button */}
+              <button
+                className="absolute top-4 right-6 text-2xl text-[#0ea5e9] hover:text-[#0284c7] transition-all duration-200"
+                onClick={() => setMenuOpen(false)}
+              >
+                ✕
+              </button>
 
-            <select
-              onChange={(e) => {
-                changeLanguage(e);
-                setMenuOpen(false);
-              }}
-              defaultValue={i18n.language}
-              className="border border-gray-300 rounded-md px-3 py-1 text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] hover:border-[#0ea5e9] transition-all duration-300 cursor-pointer"
-            >
-              <option value="en">English</option>
-              <option value="uz">Oʻzbekcha</option>
-              <option value="ru">Русский</option>
-            </select>
+              {/* NAV LINKS */}
+              {["home", "about", "products", "contacts"].map((link) => (
+                <NavLink
+                  key={link}
+                  to={`/${link}`}
+                  onClick={() => {
+                    if (pathname === `/${link}`)
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    setMenuOpen(false);
+                  }}
+                  className={({ isActive }) =>
+                    isActive ? activeStyle : normalStyle
+                  }
+                >
+                  {t(link)}
+                </NavLink>
+              ))}
+
+              {/* LANGUAGE SELECT */}
+              <select
+                onChange={(e) => {
+                  changeLanguage(e);
+                  setMenuOpen(false);
+                }}
+                defaultValue={i18n.language}
+                className="border border-gray-300 rounded-md px-3 py-1 text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] hover:border-[#0ea5e9] transition-all duration-300 cursor-pointer"
+              >
+                <option value="en">English</option>
+                <option value="uz">Oʻzbekcha</option>
+                <option value="ru">Русский</option>
+              </select>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
