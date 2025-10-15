@@ -35,24 +35,34 @@ function Contact() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center justify-center gap-10 lg:gap-16">
         {/* Image */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="overflow-hidden rounded-3xl cursor-pointer hover:scale-[1.03] transition-all duration-500 ease-in-out w-full max-w-[520px] mx-auto md:mx-0"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="overflow-hidden rounded-3xl cursor-pointer hover:scale-[1.025] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-full max-w-[520px] mx-auto md:mx-0"
         >
           <img
             src={contactImg}
             alt="Contact"
-            className="w-full h-[300px] md:h-[340px] lg:h-[360px] object-cover rounded-3xl"
+            className="w-full h-[300px] md:h-[340px] lg:h-[360px] object-cover rounded-3xl transform hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
 
         {/* Form */}
         <motion.form
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="space-y-5 bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl hover:shadow-sky-100 transition-all duration-500 ease-in-out w-full max-w-[500px] mx-auto md:mx-0"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.55,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="space-y-5 bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl hover:shadow-sky-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] w-full max-w-[500px] mx-auto md:mx-0"
         >
           <div className="grid md:grid-cols-2 gap-6">
             <div>

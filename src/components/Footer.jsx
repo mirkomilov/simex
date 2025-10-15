@@ -1,33 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import WhatsappIcon from "../assets/footer-images/whatsapp.svg";
 import InstagramIcon from "../assets/footer-images/instagram.svg";
 import TelegramIcon from "../assets/footer-images/telegram.svg";
 import FacebookIcon from "../assets/footer-images/facebook.svg";
 import LinkedinIcon from "../assets/footer-images/linkedin.svg";
+import { motion } from "framer-motion";
 
 function Footer() {
   const { t } = useTranslation();
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleLinkClick = (path) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <footer
+    <motion.footer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
       className="relative text-gray-200 border-t border-sky-700/20 transition-colors duration-300 bg-cover bg-center bg-no-repeat backdrop-blur-sm shadow-inner shadow-sky-900/40"
       style={{
         backgroundImage:
           "linear-gradient(180deg, rgba(12, 70, 150, 0.98) 0%, rgba(5, 35, 90, 0.98) 100%)",
       }}
     >
-      <div className="relative z-10 py-16 px-6 md:px-12 max-w-6xl mx-auto grid md:grid-cols-[1fr_0.8fr_1fr] gap-10 items-start justify-between md:text-left text-center">
+      <div className="relative z-10 py-14 px-6 md:px-12 max-w-6xl mx-auto grid md:grid-cols-[1fr_0.8fr_1fr] gap-10 sm:gap-8 items-start justify-between md:text-left text-center">
         {/* 1️⃣ About Section */}
         <div className="flex flex-col justify-start space-y-4">
           <h3 className="text-xl font-bold text-white mb-3 tracking-wide">
             <Link
               to="/home"
-              onClick={scrollToTop}
-              className="hover:text-sky-300 transition-colors duration-300"
+              onClick={() => handleLinkClick("/home")}
+              className="hover:text-sky-300 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
             >
               SIMEX PROGRESS
             </Link>
@@ -54,7 +60,8 @@ function Footer() {
             <li>
               <Link
                 to="/home"
-                className="hover:text-sky-300 transition-colors duration-300"
+                onClick={() => handleLinkClick("/home")}
+                className="hover:text-sky-300 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
               >
                 {t("footer.company.links.home")}
               </Link>
@@ -62,7 +69,8 @@ function Footer() {
             <li>
               <Link
                 to="/about"
-                className="hover:text-sky-300 transition-colors duration-300"
+                onClick={() => handleLinkClick("/about")}
+                className="hover:text-sky-300 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
               >
                 {t("footer.company.links.about")}
               </Link>
@@ -70,7 +78,8 @@ function Footer() {
             <li>
               <Link
                 to="/products"
-                className="hover:text-sky-300 transition-colors duration-300"
+                onClick={() => handleLinkClick("/products")}
+                className="hover:text-sky-300 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
               >
                 {t("footer.company.links.products")}
               </Link>
@@ -78,7 +87,8 @@ function Footer() {
             <li>
               <Link
                 to="/contacts"
-                className="hover:text-sky-300 transition-colors duration-300"
+                onClick={() => handleLinkClick("/contacts")}
+                className="hover:text-sky-300 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
               >
                 {t("footer.company.links.contacts")}
               </Link>
@@ -128,7 +138,7 @@ function Footer() {
                 <img
                   src={icon.src}
                   alt={icon.alt}
-                  className="w-7 h-7 opacity-90 filter invert brightness-200 transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-125 hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+                  className="w-7 h-7 opacity-90 filter invert brightness-200 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-110 hover:brightness-125 hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"
                 />
               </a>
             ))}
@@ -142,7 +152,7 @@ function Footer() {
 
       {/* 🔹 Line divider */}
       <div className="h-[1px] bg-gradient-to-r from-sky-400/50 via-sky-300/40 to-sky-400/50 blur-[1px] mt-10"></div>
-    </footer>
+    </motion.footer>
   );
 }
 

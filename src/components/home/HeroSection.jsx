@@ -11,17 +11,21 @@ export default function HeroSection() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.15 },
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
+        ease: "easeOut",
+      },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 35 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.4,
+        duration: 0.35,
         ease: [0.25, 0.1, 0.25, 1],
       },
     },
@@ -74,9 +78,28 @@ export default function HeroSection() {
 
         <motion.button
           onClick={() => navigate("/about")}
-          className="inline-block bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-sky-600 hover:to-sky-700 transition-all duration-300 text-base md:text-lg"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          className="inline-block bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-sky-200/40 transition-all duration-300 text-base md:text-lg focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-transparent active:scale-[0.98]"
+          whileHover={{
+            scale: 1.03,
+            y: -2,
+            boxShadow: "0px 8px 20px rgba(14,165,233,0.3)",
+            transition: { type: "spring", stiffness: 200, damping: 16 },
+          }}
+          whileTap={{
+            scale: 0.96,
+            y: 0,
+            transition: { duration: 0.15, ease: "easeOut" },
+          }}
+          whileFocus={{
+            scale: 1.01,
+            transition: { duration: 0.2, ease: "easeOut" },
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 180,
+            damping: 20,
+            mass: 0.8,
+          }}
           variants={itemVariants}
         >
           {t("hero.button")} →
