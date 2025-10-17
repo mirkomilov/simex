@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslation } from "react-i18next"; // ✅ qo‘shildi
+import { useTranslation } from "react-i18next";
 import {
   DollarSign,
   ClipboardList,
@@ -16,16 +16,26 @@ import {
 } from "lucide-react";
 
 const WorkProcessSection = () => {
-  const { t } = useTranslation(); // ✅ i18next qo‘shildi
+  const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
+  const sectionRef = useRef(null);
+
+  // ✅ Scroll fix: sahifani section tepasida ushlab turish
+  useEffect(() => {
+    if (showAll && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [showAll]);
 
   // Tarjima orqali bosqichlar massivini olish
   const steps = t("workProcess.steps", { returnObjects: true });
-
   const visibleSteps = showAll ? steps : steps.slice(0, 2);
 
   return (
-    <section className="py-20 px-5 sm:px-8 md:px-12 lg:px-24 bg-gray-50">
+    <section
+      ref={sectionRef}
+      className="py-20 px-5 sm:px-8 md:px-12 lg:px-24 bg-gray-50 transition-all duration-500"
+    >
       {/* Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
@@ -39,9 +49,10 @@ const WorkProcessSection = () => {
         </p>
       </div>
 
+      {/* Steps list */}
       <div className="max-w-5xl mx-auto space-y-6">
         <AnimatePresence>
-          {visibleSteps.map(({ id, title, desc, icon }) => {
+          {visibleSteps.map(({ id, title, desc }) => {
             const icons = {
               1: <DollarSign className="w-6 h-6" />,
               2: <ClipboardList className="w-6 h-6" />,

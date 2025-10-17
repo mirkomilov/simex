@@ -18,7 +18,7 @@ export const Map = () => {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50 select-none">
+    <section className="py-20 px-5 sm:px-8 md:px-12 lg:px-24 bg-gray-50">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-snug">
           {t("map.titlePrefix")}{" "}

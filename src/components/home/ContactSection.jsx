@@ -18,14 +18,17 @@ function Contact() {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID, // .env file
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
-          setAlert({ type: "success", message: t("contactFormSection.success") });
+          setAlert({
+            type: "success",
+            message: t("contactFormSection.success"),
+          });
           formRef.current.reset();
           setLoading(false);
           setTimeout(() => setAlert({ type: "", message: "" }), 4000);
@@ -91,6 +94,8 @@ function Contact() {
 
         {/* RIGHT — FORM */}
         <motion.form
+          ref={formRef}
+          onSubmit={sendEmail}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{

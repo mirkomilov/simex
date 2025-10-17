@@ -152,9 +152,9 @@ export default function Navbar() {
                 defaultValue={i18n.language}
                 className="border border-gray-300 rounded-md px-3 py-1 text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] hover:border-[#0ea5e9] transition-all duration-300 cursor-pointer"
               >
-                <option value="en">English</option>
-                <option value="uz">Oʻzbekcha</option>
-                <option value="ru">Русский</option>
+                <option value="en">EN 🇬🇧</option>
+                <option value="uz">UZ 🇺🇿</option>
+                <option value="ru">RU 🇷🇺</option>
               </select>
             </motion.div>
           </motion.div>
