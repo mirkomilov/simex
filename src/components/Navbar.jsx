@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
+import FlagSelector from "./FlagSelector";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,12 +27,6 @@ export default function Navbar() {
     "text-[#0ea5e9] font-semibold border-b-2 border-[#0ea5e9] transition-all duration-300";
   const normalStyle =
     "text-gray-700 hover:text-[#0ea5e9] transition-all duration-300";
-
-  // Language Switcher
-  const changeLanguage = (e) => {
-    const selectedLang = e.target.value;
-    i18n.changeLanguage(selectedLang);
-  };
 
   return (
     <motion.nav
@@ -72,15 +67,7 @@ export default function Navbar() {
 
       {/* LANGUAGE SELECT (DESKTOP) */}
       <div className="hidden md:block">
-        <select
-          onChange={changeLanguage}
-          defaultValue={i18n.language}
-          className="border border-gray-300 rounded-md px-3 py-1 text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] hover:border-[#0ea5e9] transition-all duration-300 cursor-pointer"
-        >
-          <option value="en">EN 🇬🇧</option>
-          <option value="uz">UZ 🇺🇿</option>
-          <option value="ru">RU 🇷🇺</option>
-        </select>
+        <FlagSelector i18n={i18n} />
       </div>
 
       {/* MOBILE MENU BUTTON */}
@@ -143,19 +130,12 @@ export default function Navbar() {
                 </NavLink>
               ))}
 
-              {/* LANGUAGE SELECT */}
-              <select
-                onChange={(e) => {
-                  changeLanguage(e);
-                  setMenuOpen(false);
-                }}
-                defaultValue={i18n.language}
-                className="border border-gray-300 rounded-md px-3 py-1 text-sm text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-[#0ea5e9] hover:border-[#0ea5e9] transition-all duration-300 cursor-pointer"
-              >
-                <option value="en">EN 🇬🇧</option>
-                <option value="uz">UZ 🇺🇿</option>
-                <option value="ru">RU 🇷🇺</option>
-              </select>
+              {/* LANGUAGE SELECT (MOBILE) */}
+              <FlagSelector
+                i18n={i18n}
+                mobile={true}
+                onSelect={() => setMenuOpen(false)}
+              />
             </motion.div>
           </motion.div>
         )}

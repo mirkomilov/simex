@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background -->
+  <rect width="100%" height="100%" fill="none"/>
+  
+  <!-- Centered stacked text -->
+  <g fill="#fff" text-anchor="middle" font-weight="400"
+     font-family="Times New Roman, Cormorant Garamond, Garamond, Georgia, serif">
+    <text x="256" y="230" font-size="96" letter-spacing="1">Simex</text>
+    <text x="256" y="330" font-size="108" letter-spacing="2">PROGRESS</text>
+  </g>
+</svg>
