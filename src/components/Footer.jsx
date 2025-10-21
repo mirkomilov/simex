@@ -42,7 +42,7 @@ function Footer() {
             {t("footer.about.description")}
           </p>
           <a
-            href="/docs/document.pdf"
+            href="/docs/Privacy.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sky-400 text-[14.5px] mt-3 inline-block hover:text-sky-300 transition-colors duration-300"
