@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // ✅ tarjima qo‘shildi
-import qualityImg from "../../assets/home-images/quality.jpg";
+import qualityImg from "../../assets/home-images/quality2.jpg";
 
 const Counter = ({ from = 0, to, duration = 2000 }) => {
   const ref = useRef(null);
